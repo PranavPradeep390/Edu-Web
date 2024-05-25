@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <>
-   <div className="w-full lg:h-40 md:h-48 sm:h-56 h-64 bg-purple-500 flex flex-wrap items-center justify-around">
+   <div className="w-full lg:h-40 md:h-48 sm:h-56 h-56 bg-purple-500 flex flex-wrap items-center justify-around">
       <div><h1>join our newsletter</h1></div>
       <div className='flex flex-wrap'>
         <input type="text" value="" placeholder='Enter your email here'/>
@@ -15,7 +15,7 @@ function Footer() {
 
     <div className='lg:w-1/4 sm:w-1/2 w-full flex flex-col items-center' style={{listStyle:"none",padding:"35px"}}>
       <img src="" alt="" srcset="" />
-      <p style={{color:"white"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate voluptatem nisi quibusdam? Fugit dignissimos sit itaque a odio, tempora architecto quam quod aspernatur molestiae distinctio fugiat doloremque pariatur consequatur.</p>
+      <p className='justify-center' style={{color:"white"}}>Lorem ipsum dolor sit amet consectetu voluptatem nisi quibusdam? Fugit dignissimos sit itaque a odio, tempora architecto quam quod aspernatur molestiae distinctio fugiat doloremque pariatur consequatur.</p>
     </div>
 
     <div className='lg:w-1/4 sm:w-1/2 w-full flex flex-col items-center' style={{padding:"35px"}}>
@@ -52,14 +52,16 @@ function Footer() {
 
    </div>
 
-   <div className='w-full lg:h-30 md:h-40 sm:h-50 h-56 bg-slate-100 flex flex-wrap '>
+   <div className='w-full lg:h-25 md:h-35 sm:h-45 h-50 bg-slate-100 flex flex-wrap  items-center justify-around'>
     <div><h5>© 2024. Designed By A2Z Alphabetsolutionz PVT Ltd.</h5></div>
-    <div><ul style={{listStyle:"none"}}>
-      <li>fb</li>
-      <li>wt</li>
-      <li>in</li>
-      <li>pi</li>
-      </ul></div>
+    <div>
+      <ul className='flex flex-row justify-center' style={{listStyle:"none"}}>
+      <li className='p-5'>fb</li>
+      <li className='p-5'>wt</li>
+      <li className='p-5'>in</li>
+      <li className='p-5'>pi</li>
+      </ul>
+    </div>
 
    </div>
     </>

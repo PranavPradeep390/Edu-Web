@@ -1,16 +1,14 @@
 import React from "react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import Home from "./Pages/Home";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
-    // <div className="App">
-    // <h1 className="text-3xl font-bold capitalize text-red-700">
-    //   Hello world!
-    // </h1>
-    
-    // </div>
     <>
     <Header/>
+    <Home/>
     <Footer/>
     </>
   );

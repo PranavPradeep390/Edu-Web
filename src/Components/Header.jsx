@@ -34,7 +34,7 @@ function Header() {
           </span>
         </div>
 
-        <ul className={`md:flex md:items-center md:static absolute bg-white w-full left-0 md:w-auto md:pl-0 pl-7 transition-all ease-in duration-500 ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-400px] opacity-0'} md:top-auto md:opacity-100`}>
+        <ul className={`md:flex md:items-center  z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:pl-0 pl-7 transition-all ease-in duration-500 ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-400px] opacity-0'} md:top-auto md:opacity-100`}>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
             {/* <a href="#">Home</a> */}Home
           </li>
