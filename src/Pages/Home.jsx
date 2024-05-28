@@ -15,13 +15,13 @@ function Home() {
     onSwiper={(swiper) => console.log(swiper)}
     onSlideChange={() => console.log('slide change')}
   >
-     <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"fixed"}}>Slide 1</SwiperSlide>
+     <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"cover"}}>Slide 1</SwiperSlide>
  
-    <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"fixed"}}>Slide 2</SwiperSlide>
+    <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"cover"}}>Slide 2</SwiperSlide>
         
-    <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"fixed"}}>Slide 3</SwiperSlide>
+    <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"cover"}}>Slide 3</SwiperSlide>
 
-    <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"fixed"}}>Slide 4</SwiperSlide>
+    <SwiperSlide style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"600px",backgroundSize:"cover"}}>Slide 4</SwiperSlide>
 
  </Swiper>
  

@@ -36,10 +36,10 @@ function Header() {
 
         <ul className={`md:flex md:items-center  z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:pl-0 pl-7 transition-all ease-in duration-500 ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-400px] opacity-0'} md:top-auto md:opacity-100`}>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            {/* <a href="#">Home</a> */}Home
+            <a href="/">Home</a>
           </li>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            {/* <a href="#">About</a> */}About
+            <a href="/about">About</a>
           </li>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
             {/* <a href="#">Services</a> */}Services
@@ -48,7 +48,7 @@ function Header() {
             {/* <a href="#">Gallery</a> */}Gallery
           </li>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            {/* <a href="#">Contact Us</a> */}Contact Us
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
       </nav>
