@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import Rating from "./Components/Rating";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/rating" element={<Rating/>}/>
+
+
 
       </Routes>
    <Footer/>

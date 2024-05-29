@@ -4,13 +4,13 @@ function Contact() {
   return (
     <>
    
-<div className='flex-col' style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"300px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
-    <h1 
-    className='text-2xl'>Contact Us
+<div className='flex-col' style={{ backgroundImage: 'url("https://thumbs.dreamstime.com/b/seamless-pattern-abstract-outline-silhouette-human-face-modern-avant-garde-poster-white-grey-background-trendy-144736736.jpg")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+<h1 
+    className='text-4xl uppercase mb-2'><b>contact us</b>
     </h1>
   
     <h1
-    className='text-xl pt-3'>Home-Contact us
+    className='text-xl p-3 bg-yellow-500 rounded-full text-white'><b>Home - Contact us</b>
     </h1>
 </div>
  
@@ -50,7 +50,6 @@ function Contact() {
 </form>
 
 <div>
-{/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.4921693882093!2d76.87479683922123!3d8.548579991530245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf9bca82635f%3A0x72d8ed7960ffc184!2sTechnopark%20Phase%203!5e0!3m2!1sen!2sin!4v1716787309117!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
 
 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.4921693882093!2d76.87479683922123!3d8.548579991530245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf9bca82635f%3A0x72d8ed7960ffc184!2sTechnopark%20Phase%203!5e0!3m2!1sen!2sin!4v1716787309117!5m2!1sen!2sin' style={{height:"500px", border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='w-full'/>
 </div>

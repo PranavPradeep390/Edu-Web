@@ -64,7 +64,7 @@ function Home() {
   </div>
 
   
-<div className='bg-red-800'>
+<div className=''>
     <h1 className='text-center tex'>Our Popular Classes</h1>
       <div className='flex flex-wrap w-full '>
         

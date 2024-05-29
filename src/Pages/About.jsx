@@ -5,23 +5,32 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
+import { CircularProgress } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Rating from '../Components/Rating';
+import Button from '@mui/material/Button';
+
+
 
 function About() {
 
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: .8,
+    threshold: .5,
   });
   
   return (
     <>
-    <div className='flex-col' style={{ backgroundImage: 'url("https://img.freepik.com/premium-vector/boy-pushing-lawn-mower-garden_1308-15108.jpg?w=360")',height:"300px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+    <div className='flex-col' style={{ backgroundImage: 'url("https://thumbs.dreamstime.com/b/seamless-pattern-abstract-outline-silhouette-human-face-modern-avant-garde-poster-white-grey-background-trendy-144736736.jpg")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
-    className='text-2xl uppercase'>About us
+    className='text-4xl uppercase mb-2'><b>About us</b>
     </h1>
   
     <h1
-    className='text-xl p-3 bg-yellow-500 rounded-full text-white'>Home-About us
+    className='text-xl p-3 bg-yellow-500 rounded-full text-white'><b>Home - About us</b>
     </h1>
     </div>
 
@@ -48,40 +57,58 @@ function About() {
 
   <div 
       ref={ref} 
-      className='w-full p-0 text-white font-medium text-center bg-blue-400 flex flex-wrap items-center justify-evenly' 
-      style={{height:"400px"}}
+      className='w-full shadow-inner p-10 text-white font-medium text-center bg-blue-400 flex flex-wrap items-center justify-evenly h-[800px] md:h-[350px]'
     >
-      <div className='w-full sm:w-1/2 md:w-1/4'>
-        
-        <p className='text-5xl'>
-          {inView && <CountUp end={20} duration={2.5} />}+
-        </p>
-        <p>Years of Excellence</p>
-        <MilitaryTechIcon style={{color:"lightgray"}}/>
+      <div className='w-full sm:w-1/2 md:w-1/4 p-2'>
+        <div className='mx-auto rounded-full  relative flex items-center justify-center' style={{backgroundColor:"lightskyblue",height:"150px",width:"150px"}}>
+          <CircularProgress duration={4} variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'}} className='rounded-full shadow-2xl'/>
+          <div className='absolute flex flex-col items-center'>
+            <MilitaryTechIcon style={{color:"white"}}/>
+            <p className='text-5xl'>
+              {inView && <em><CountUp end={20} duration={4} /></em>}
+            </p>
+            <p style={{fontSize:"12px"}}>Years of <br />Excellence</p>
+          </div>
+        </div>
       </div>
-      <div className='w-full sm:w-1/2 md:w-1/4'>
-        
-        <p className='text-5xl'>
-          {inView && <CountUp end={50} duration={2.5} />}+<SchoolIcon style={{color:"lightgray",fontSize:"80px",marginRight:"20px"}}/>
-        </p>
-        <p>Qualified Teachers </p>
-       
+
+      <div className='w-full sm:w-1/2 md:w-1/4 p-2'>
+        <div className='mx-auto rounded-full  relative flex items-center justify-center' style={{backgroundColor:"lightskyblue",height:"150px",width:"150px"}}>
+          <CircularProgress variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'  }}  className='rounded-full shadow-2xl'/>
+          <div className='absolute flex flex-col items-center'>
+            <SchoolIcon style={{color:"white"}}/>
+            <p className='text-5xl'>
+              {inView && <em><CountUp end={50} duration={4}/></em>}
+            </p>
+            <p style={{fontSize:"12px"}}>Qualified <br /> Teachers </p>
+          </div>
+        </div>
       </div>
-      <div className='w-full sm:w-1/2 md:w-1/4'>
-        
-        <p className='text-5xl'>
-          {inView && <CountUp end={500} duration={2.5} />}+
-        </p>
-        <p>Students Enrolled</p>
-        <PersonIcon style={{color:"lightgray"}}/>
+
+      <div className='w-full sm:w-1/2 md:w-1/4 p-2'>
+        <div className='mx-auto rounded-full  relative flex items-center justify-center' style={{backgroundColor:"lightskyblue",height:"150px",width:"150px"}}>
+          <CircularProgress variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'}}  className='rounded-full shadow-2xl'/>
+          <div className='absolute flex flex-col items-center'>
+            <PersonIcon style={{color:"white"}}/>
+            <p className='text-5xl'>
+              {inView && <em><CountUp end={500} duration={4} /></em>}
+            </p>
+            <p style={{fontSize:"12px"}}>Students <br /> Enrolled</p>
+          </div>
+        </div>
       </div>
-      <div className='w-full sm:w-1/2 md:w-1/4'>
-        
-        <p className='text-5xl'>
-          {inView && <CountUp end={15} duration={2.5} />}+
-        </p>
-        <p>Total Award</p>
-        <EmojiEventsIcon style={{color:"lightgray"}}/>
+
+      <div className='w-full sm:w-1/2 md:w-1/4 p-2'>
+        <div className='mx-auto rounded-full relative flex items-center justify-center' style={{backgroundColor:"lightskyblue",height:"150px",width:"150px"}}>
+          <CircularProgress variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'  }} className='rounded-full shadow-2xl' />
+          <div className='absolute flex flex-col items-center'>
+            <EmojiEventsIcon style={{color:"white"}}/>
+            <p className='text-5xl'>
+              {inView && <em><CountUp end={15} duration={4} /></em>}
+            </p>
+            <p style={{fontSize:"12px"}}>Total <br /> Award</p>
+          </div>
+        </div>
       </div>
   </div>
 
@@ -106,6 +133,62 @@ function About() {
      
  </div>
 
+<div>
+
+<div>
+  <p className='uppercase text-center text-orange-400'style={{fontWeight:"bold"}}>testimonial</p>
+  <h1 className='text-center capitalize text-4xl '>parents are saying</h1>
+   <Swiper
+       modules={[Pagination]}
+       spaceBetween={50}
+       pagination={{ clickable: true }}
+       breakpoints={{
+         320: {
+           slidesPerView: 1,
+           spaceBetween: 20,
+         },
+         640: {
+           slidesPerView: 1,
+           spaceBetween: 20,
+         },
+         768: {
+           slidesPerView: 2,
+           spaceBetween: 40,
+         },
+         1024: {
+           slidesPerView: 3,
+           spaceBetween: 50,
+         },
+       }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      
+    >
+       <SwiperSlide><Rating/></SwiperSlide>
+   
+      <SwiperSlide><Rating/></SwiperSlide>
+          
+      <SwiperSlide><Rating/></SwiperSlide>
+  
+      <SwiperSlide><Rating/></SwiperSlide>
+  
+   </Swiper>
+</div>
+
+<div style={{backgroundColor:"#95c535"}} className='w-full text-center text-white mt-10 p-8 sm:p-16'>
+
+  <p className='uppercase pb-2 sm:p-4 text-xs sm:text-base' ><b>contact us for a free consultation</b></p>
+   <h1 className='capitalize text-lg sm:text-4xl  sm:p-5'><b>let's talk about opportunities</b></h1>
+   <p className='p-1 sm:p-4 sm:text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio unde velit obcaecati id quasi temporibus. Delectus, pariatur cumque nostrum minima, expedita, nesciunt ad nisi magni natus voluptas omnis. Quibusdam?</p>
+
+   <div className=' mt-2 flex items-center justify-center gap-10'>
+      <button className='bg-blue-500 p-3 rounded-3xl text-xs sm:text-lg'>Call Now</button>
+      <button className='bg-white p-3 rounded-3xl text-xs sm:text-lg text-blue-500'>Contact Us</button>
+   </div>
+
+</div>
+ 
+</div>
   
 
     
