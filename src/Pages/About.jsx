@@ -11,7 +11,8 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Rating from '../Components/Rating';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import { Autoplay } from 'swiper/modules';
 
 
 
@@ -21,16 +22,85 @@ function About() {
     triggerOnce: true,
     threshold: .5,
   });
+
+  const ratingData = [
+    { 
+      rating: 5, 
+      review: 'Great service!', 
+      user: 'User 1', 
+      location: 'Germany', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'The service exceeded my expectations. Highly professional and efficient.'
+    },
+    { 
+      rating: 4, 
+      review: 'Very satisfied!', 
+      user: 'User 2', 
+      location: 'USA', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'Good experience overall. Prompt service and friendly staff.'
+    },
+    { 
+      rating: 3, 
+      review: 'Good experience.', 
+      user: 'User 3', 
+      location: 'UK', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'The service was decent, though there is room for improvement in some areas.'
+    },
+    { 
+      rating: 5, 
+      review: 'Excellent!', 
+      user: 'User 4', 
+      location: 'France', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'Absolutely outstanding service! I would definitely recommend it to others.'
+    },
+    { 
+      rating: 4, 
+      review: 'Very good!', 
+      user: 'User 5', 
+      location: 'Italy', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'Very happy with the service. The team was professional and courteous.'
+    },
+    { 
+      rating: 3, 
+      review: 'Satisfied.', 
+      user: 'User 6', 
+      location: 'Spain', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'An average experience. The service was satisfactory but not exceptional.'
+    },
+    { 
+      rating: 5, 
+      review: 'Highly recommended!', 
+      user: 'User 7', 
+      location: 'Netherlands', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'Phenomenal service! I am extremely pleased and will use it again.'
+    },
+    { 
+      rating: 4, 
+      review: 'Good job!', 
+      user: 'User 8', 
+      location: 'Belgium', 
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      description: 'Great job by the team. I am very satisfied with the outcome.'
+    },
+  ];
+  
+
   
   return (
     <>
-    <div className='flex-col' style={{ backgroundImage: 'url("https://thumbs.dreamstime.com/b/seamless-pattern-abstract-outline-silhouette-human-face-modern-avant-garde-poster-white-grey-background-trendy-144736736.jpg")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+    <div className='flex-col' style={{ backgroundImage: 'url("https://images.pexels.com/photos/8422104/pexels-photo-8422104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
-    className='text-4xl uppercase mb-2'><b>About us</b>
+    className='text-4xl uppercase mb-2  font-serif'><b>About Us</b>
     </h1>
   
     <h1
-    className='text-xl p-3 bg-yellow-500 rounded-full text-white'><b>Home - About us</b>
+    className='text-xl p-3 bg-yellow-500 rounded-xl text-white  font-serif'><b>Home - About us</b>
     </h1>
     </div>
 
@@ -38,8 +108,8 @@ function About() {
   <div className='flex flex-wrap w-full p-10  items-center'>
      
 
-      <div className='md:w-1/2 md:p-5 '>
-        <h1 className=' text-center sm:text-left text-3xl pb-5'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
+      <div className='md:w-1/2 p-5 text-center col  border-r-8  border-b-8 border-amber-400 rounded-3xl pb-8 shadow-xl py-10' style={{ backgroundColor: '#f0ebeb' }}>
+        <h1 className=' text-center sm:text-left text-3xl pb-5  text-[#404040] font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
         <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         <br /><br />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -57,7 +127,7 @@ function About() {
 
   <div 
       ref={ref} 
-      className='w-full shadow-inner p-10 text-white font-medium text-center bg-blue-400 flex flex-wrap items-center justify-evenly h-[800px] md:h-[350px]'
+      className='w-full shadow-inner p-10 text-white font-medium text-center flex flex-wrap items-center justify-evenly h-[800px] md:h-[310px]' style={{backgroundColor:"#37d4e6"}}
     >
       <div className='w-full sm:w-1/2 md:w-1/4 p-2'>
         <div className='mx-auto rounded-full  relative flex items-center justify-center' style={{backgroundColor:"lightskyblue",height:"150px",width:"150px"}}>
@@ -122,8 +192,8 @@ function About() {
         />
      </div>
 
-     <div className='md:w-1/2 md:p-5 '>
-       <h1 className=' text-center sm:text-left text-3xl pb-5'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
+     <div className='md:w-1/2 p-5 text-center col  border-l-8  border-b-8 border-amber-400 rounded-3xl pb-8 shadow-xl py-10' style={{ backgroundColor: '#f0ebeb' }}>
+       <h1 className=' text-center sm:text-left text-3xl pb-5  text-[#404040] font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
        <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
        <br /><br />
        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -137,49 +207,52 @@ function About() {
 
 <div>
   <p className='uppercase text-center text-orange-400'style={{fontWeight:"bold"}}>testimonial</p>
-  <h1 className='text-center capitalize text-4xl '>parents are saying</h1>
-   <Swiper
-       modules={[Pagination]}
-       spaceBetween={50}
-       pagination={{ clickable: true }}
-       breakpoints={{
-         320: {
-           slidesPerView: 1,
-           spaceBetween: 20,
-         },
-         640: {
-           slidesPerView: 1,
-           spaceBetween: 20,
-         },
-         768: {
-           slidesPerView: 2,
-           spaceBetween: 40,
-         },
-         1024: {
-           slidesPerView: 3,
-           spaceBetween: 50,
-         },
-       }}
+  <h1 className='text-center capitalize text-4xl font-serif '>parents are saying</h1>
+  <Swiper
+      modules={[Autoplay]}
+      spaceBetween={50}
+      autoplay={{ delay: 2000 }}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-      
     >
-       <SwiperSlide><Rating/></SwiperSlide>
-   
-      <SwiperSlide><Rating/></SwiperSlide>
-          
-      <SwiperSlide><Rating/></SwiperSlide>
-  
-      <SwiperSlide><Rating/></SwiperSlide>
-  
-   </Swiper>
+      {ratingData.map((data, index) => (
+        <SwiperSlide key={index}>
+          <Rating
+            rating={data.rating}
+            review={data.review}
+            user={data.user}
+            location={data.location}
+            image={data.image}
+            description={data.description}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
 </div>
 
 <div style={{backgroundColor:"#95c535"}} className='w-full text-center text-white mt-10 p-8 sm:p-16'>
 
-  <p className='uppercase pb-2 sm:p-4 text-xs sm:text-base' ><b>contact us for a free consultation</b></p>
-   <h1 className='capitalize text-lg sm:text-4xl  sm:p-5'><b>let's talk about opportunities</b></h1>
-   <p className='p-1 sm:p-4 sm:text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio unde velit obcaecati id quasi temporibus. Delectus, pariatur cumque nostrum minima, expedita, nesciunt ad nisi magni natus voluptas omnis. Quibusdam?</p>
+  <p className='uppercase pb-2 sm:p-4 text-xs sm:text-base font-semibold' >contact us for a free consultation</p>
+   <h1 className='capitalize text-lg sm:text-4xl  sm:p-5 font-serif'><b>let's talk about opportunities</b></h1>
+   <p className='p-1 sm:p-4 sm:text-base w-1/2 mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio unde velit obcaecati id quasi temporibus. Delectus, pariatur cumque nostrum minima, expedita, nesciunt ad nisi magni natus voluptas omnis. Quibusdam?</p>
 
    <div className=' mt-2 flex items-center justify-center gap-10'>
       <button className='bg-blue-500 p-3 rounded-3xl text-xs sm:text-lg'>Call Now</button>
