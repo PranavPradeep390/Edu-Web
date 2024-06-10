@@ -7,6 +7,7 @@ import Tagorelogo from '../Assets/Tagorelogo.jpg'
 // import LinkedInIcon from '@mui/icons-material/LinkedIn';
 // import TwitterIcon from '@mui/icons-material/Twitter';
 // import InstagramIcon from '@mui/icons-material/Instagram';
+import './header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,20 +54,20 @@ function Header() {
         </div>
 
         <ul className={`md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:pl-0 pl-7 transition-all ease-in duration-500 ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-400px] opacity-0'} md:top-auto md:opacity-100`}>
-          <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            <a href="/" style={{fontStyle:"oblique"}}>Home</a>
+          <li className='md:my-0 text-xl '>
+            <a href="/" className='headerlists rounded-xl'>Home</a>
           </li>
-          <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            <a href="/about" style={{fontStyle:"oblique"}}>About</a>
+          <li className='md:my-0 text-xl '>
+            <a href="/about" className='headerlists rounded-xl' >About</a>
           </li>
-          <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-          <a href="/events" style={{fontStyle:"oblique"}}>News and Events</a>
+          <li className='md:my-0 text-xl '>
+          <a href="/events" className='headerlists rounded-xl' >News and Events</a>
           </li>
-          <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-          <a href="/gallery" style={{fontStyle:"oblique"}}>Gallery</a>
+          <li className='md:my-0 text-xl '>
+          <a href="/gallery" className='headerlists rounded-xl'>Gallery</a>
           </li>
-          <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            <a href="/contact" style={{fontStyle:"oblique"}}>Contact Us</a>
+          <li className='md:my-0 text-xl  '>
+            <a href="/contact" className='headerlists rounded-xl' >Contact Us</a>
           </li>
         </ul>
       </nav>
