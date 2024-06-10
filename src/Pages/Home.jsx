@@ -1,4 +1,3 @@
-import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -17,7 +16,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import school from '../Assets/school.jpg'
 import { Link } from 'react-router-dom';
 import './home.css'
-
+import React, { useEffect, useRef, useState } from 'react';
 
 function Home() {
 
@@ -76,8 +75,8 @@ function Home() {
           description: 'An average experience. The service was satisfactory but not exceptional.'
         },
         { 
-          rating: 5, 
-          review: 'Highly recommended!', 
+          rating: 4, 
+          review: 'Very Good', 
           user: 'User 7', 
           location: 'Netherlands', 
           image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
@@ -92,7 +91,66 @@ function Home() {
           description: 'Great job by the team. I am very satisfied with the outcome.'
         },
       ];
-      
+
+      const images = [
+        {
+          src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 1"
+        },
+        {
+          src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 2"
+        },
+        {
+          src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 3"
+        },
+        {
+          src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 4"
+        },
+        {
+          src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 5"
+        },
+        {
+          src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 6"
+        },
+        {
+          src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 7"
+        },
+        {
+          src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Image 8"
+        }
+      ];
+
+      const [isVisible, setIsVisible] = useState(false);
+  const galleryRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); 
+        }
+      },
+      { threshold: .6 } 
+    );
+
+    if (galleryRef.current) {
+      observer.observe(galleryRef.current);
+    }
+    return () => {
+      if (galleryRef.current) {
+        observer.unobserve(galleryRef.current);
+      }
+    };
+  }, []);
+
 
   return (
   <div> 
@@ -143,6 +201,7 @@ function Home() {
       <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white'><Link to={'/about'}>Read More</Link></button>
     </div>
   </div>
+  <div className='w-full'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f2.png" alt="" srcset="" /></div>
 
 {/* 3 cards */}
 <hr className='h-2' />
@@ -174,8 +233,9 @@ function Home() {
  </div>
 
   </div>
-
 <hr className='h-2'/>
+
+
 {/* classes part */}
   <div className='p-14'style={{backgroundColor:'#f2f6ff'}}>
 
@@ -255,12 +315,11 @@ function Home() {
 </div>
 
 {/* progress bar */}
-
   <div style={{backgroundColor:'#f2f6ff'}}>
     <svg
       id="wave"
       style={{ transform: 'rotate(0deg)', transition: '0.3s' }}
-      viewBox="0 0 1440 100"
+      viewBox="0 0 1440 96"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -337,6 +396,10 @@ function Home() {
   
         
     </div>
+    
+
+{/* gallery */}
+<div className='w-full' ref={galleryRef} style={{backgroundImage:'url("https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/p2.jpg")',backgroundSize:"contain"}}>
     <svg 
       id="wave" 
       style={{ transform: "rotate(180deg)", transition: "0.3s" }} 
@@ -356,13 +419,38 @@ function Home() {
         d="M0,40L12.6,48.3C25.3,57,51,73,76,71.7C101.1,70,126,50,152,50C176.8,50,202,70,227,76.7C252.6,83,278,77,303,75C328.4,73,354,77,379,76.7C404.2,77,429,73,455,70C480,67,505,63,531,63.3C555.8,63,581,67,606,70C631.6,73,657,77,682,78.3C707.4,80,733,80,758,71.7C783.2,63,808,47,834,40C858.9,33,884,37,909,40C934.7,43,960,47,985,40C1010.5,33,1036,17,1061,20C1086.3,23,1112,47,1137,60C1162.1,73,1187,77,1213,76.7C1237.9,77,1263,73,1288,70C1313.7,67,1339,63,1364,66.7C1389.5,70,1415,80,1440,70C1465.3,60,1491,30,1516,15C1541.1,0,1566,0,1592,6.7C1616.8,13,1642,27,1667,31.7C1692.6,37,1718,33,1743,26.7C1768.4,20,1794,10,1806,5L1818.9,0L1818.9,100L1806.3,100C1793.7,100,1768,100,1743,100C1717.9,100,1693,100,1667,100C1642.1,100,1617,100,1592,100C1566.3,100,1541,100,1516,100C1490.5,100,1465,100,1440,100C1414.7,100,1389,100,1364,100C1338.9,100,1314,100,1288,100C1263.2,100,1238,100,1213,100C1187.4,100,1162,100,1137,100C1111.6,100,1086,100,1061,100C1035.8,100,1011,100,985,100C960,100,935,100,909,100C884.2,100,859,100,834,100C808.4,100,783,100,758,100C732.6,100,707,100,682,100C656.8,100,632,100,606,100C581.1,100,556,100,531,100C505.3,100,480,100,455,100C429.5,100,404,100,379,100C353.7,100,328,100,303,100C277.9,100,253,100,227,100C202.1,100,177,100,152,100C126.3,100,101,100,76,100C50.5,100,25,100,13,100L0,100Z"
       />
     </svg>
-  
+      <h1 className={`capitalize text-center text-4xl font-serif font-semibold text-[#404040] py-10 ${isVisible ? 'animate-fade-in' : ''}`}>
+        gallery
+      </h1>
 
-<div className='mt-9'>
+      <div className='w-full flex flex-wrap items-center justify-center gap-16 px-20'>
+        {images.map((image, index) => (
+          <div 
+            key={index} 
+            className={`border-l-8 border-green-300 rounded-2xl galleryhover ${isVisible ? 'animate-fade-in' : ''}`}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <img 
+              src={image.src} 
+              alt={image.alt} 
+              className='h-[200px] w-[300px] md:h-[220px] md:w-[250px] rounded-lg shadow-lg' 
+            />
+          </div>
+        ))}
+      </div>
+
+      <p className='text-center text-xl text-blue-700 m-5'>
+        <a href="/gallery">see more<ChevronRightIcon/></a>
+      </p>
+      <hr />
+  </div>
+
+{/* parents rating */}
+<div className='mt-9 px-12'>
   <h1 className='text-center capitalize text-4xl text-[#404040] font-semibold font-serif'>parents are saying</h1>
   <Swiper
       modules={[Autoplay]}
-      spaceBetween={50}
+      spaceBetween={37}
       autoplay={{ delay: 2000 }}
       breakpoints={{
         320: {
@@ -401,65 +489,94 @@ function Home() {
     </Swiper>
 </div>
 
-{/* gallery */}
-<div className='w-full'>
-  <h1 className='capitalize text-center text-4xl font-serif font-semibold text-[#404040] py-10'>gallery</h1>
-  
-<div className='w-full flex flex-wrap items-center justify-around gap-6 px-20'>
-  <div className='border-l-8 border-red-600 rounded-2xl'><img src="https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" className='h-[200px] w-[300px] md:h-[300px] md:w-[300px] rounded-xl shadow-lg' /></div>
-  <div className='border-l-8 border-red-600 rounded-2xl'><img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" className='h-[200px] w-[300px] md:h-[300px] md:w-[300px] rounded-xl shadow-lg'  /></div>
-  <div className='border-l-8 border-red-600 rounded-2xl'><img src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" className='h-[200px] w-[300px] md:h-[300px] md:w-[300px] rounded-xl shadow-lg' /></div>
-  <div className='border-l-8 border-red-600 rounded-2xl'><img src="https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""className=' h-[200px] w-[300px] md:h-[300px] md:w-[300px] rounded-xl shadow-lg ' /></div>
-
-</div>
-
-<p className='text-center text-xl text-blue-700 m-5'><a href="/gallery">see more<ChevronRightIcon/></a></p>
-</div>
+<div className='w-full'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f2.png" alt="" srcset="" /></div>
 
 
-{/* why choose us */}
-  <div className='flex flex-wrap w-full p-10 row items-center'>
-    
-      <div className="md:w-1/2 p-5 col">
-    <img 
-        className=" mx-auto h-[270px] w-[400px] md:h-[500px] md:w-[600px]" 
-        src="https://cutesolution.com/html/rainbow2/assets/img/choose-1.jpg" 
-        alt="About"
-    />
-      </div>
 
-      <div className='md:w-1/2 p-5 text-center col  border-r-8  border-b-8 border-amber-400 rounded-3xl pb-8 shadow-xl' style={{ backgroundColor: '#f0ebeb' }}>
-        <h2 className='pt-10 pb-10 text-4xl  text-[#404040] font-semibold font-serif'>Why Choose Us</h2>
-        <h1 className='justify-start text-2xl mb-4 font-serif'>We Are Here to Help Parents Raise Happy and Healthy Children</h1>
-        <div className="max-w-md mx-auto mt-8">
-      <h1 className="text-3xl font-bold mb-4"></h1>
-
-      <div className='flex flex-wrap gap-6'>
-      <div>
-        <div className='w-50 h-15 font-semibold ms-9 sm:ms-0 rounded-lg shadow-inner border-l-green-500 border-l-4 bg-white p-6 mb-6'><p>Innovative Learning</p></div>
-        <div className='w-50 h-15 font-semibold ms-9 sm:ms-0 rounded-lg shadow-inner border-l-green-500 border-l-4 bg-white  p-6 mb-6'><p> Safe Environment</p></div>
-        <div className='w-50 h-15 font-semibold ms-9 sm:ms-0 rounded-lg shadow-inner border-l-green-500 border-l-4 bg-white p-6'><p>Experienced Educators</p></div>
-      </div>
-      <div>
-        <div className='w-50 h-15 font-semibold ms-9 sm:ms-0 rounded-lg shadow-inner border-l-green-500 border-l-4 bg-white  p-6 mb-6'><p>Interactive Learning</p></div>
-        <div className='w-50 h-15 font-semibold ms-9 sm:ms-0 rounded-lg shadow-inner border-l-green-500 border-l-4 bg-white p-6 mb-6'><p>Cultural Diversity</p></div>
-        <div className='w-50 h-15 font-semibold ms-9 sm:ms-0 rounded-lg shadow-inner border-l-green-500 border-l-4 bg-white  p-6'><p>  Valued Education</p></div>
-      </div>
-      </div>
-    </div>
-      
-      </div>
-
-
-  </div>
-
-  <div className='p-10' style={{backgroundColor:"wheat"}}>
+{/* exprt teachers */}
+  <div className='p-10' style={{backgroundColor:"white"}}>
   <div className='flex flex-col justify-center items-center'>
-    <h1 className=' text-center sm:text-left text-2xl pb-5  mt-1'>Team Member</h1>
-    <h1 className=' text-center sm:text-left text-3xl pb-5 text-[#404040] font-semibold font-serif'>Expert Teacher</h1>
+    <h1 className=' text-center sm:text-left text-3xl pb-5 text-[#12265a] font-semibold font-serif'>Expert Teacher</h1>
     </div>
   <Card2/>
   </div>
+
+{/* why choose us */}
+  <div className='flex flex-wrap w-full p-10 row items-center  bg-blue-200'>
+
+    <h1 className='mx-auto text-5xl mb-11 font-serif text-[#12265a] font-semibold'>Why Choose Us ? </h1>
+    
+     <div className='flex flex-wrap gap-14 justify-center'>
+        
+        <div className='flex items-center gap-3'>
+         <div>
+           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant4.png" alt="" />
+        </div>
+        <div className='bg-white p-4 rounded-2xl'>
+            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Innovative Learning</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+        </div>
+        </div>
+
+        <div className='flex items-center gap-3'>
+         <div>
+           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant5.png" alt="" />
+        </div>
+        <div className='bg-white p-4 rounded-2xl'>
+            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Safe Enviroment</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+        </div>
+        </div>
+
+        <div className='flex items-center gap-3'>
+         <div>
+           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant1.png" alt="" />
+        </div>
+        <div className='bg-white p-4 rounded-2xl'>
+            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Experienced Educators</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+        </div>
+        </div>
+
+        <div className='flex items-center gap-3'>
+         <div>
+           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant3.png" alt="" />
+        </div>
+        <div className='bg-white p-4 rounded-2xl'>
+            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Cultural Diversity</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+        </div>
+        </div>
+
+        <div className='flex items-center gap-3'>
+         <div>
+           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant1.png" alt="" />
+        </div>
+        <div className='bg-white p-4 rounded-2xl'>
+            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>
+            Interactive Learning</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+        </div>
+        </div>
+
+        <div className='flex items-center gap-3'>
+         <div>
+           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant4.png" alt="" />
+        </div>
+        <div className='bg-white p-4 rounded-2xl'>
+            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Valued Education</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+        </div>
+        </div>
+        
+
+      </div>
+
+  </div>
+
+  <div className='bg-blue-200'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f1.png" alt="" srcset="" /></div>
+
+
 
   </div>
   )
