@@ -54,22 +54,24 @@ function Header() {
         </div>
 
         <ul className={`md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:pl-0 pl-7 transition-all ease-in duration-500 ${isMenuOpen ? 'top-20 opacity-100' : 'top-[-400px] opacity-0'} md:top-auto md:opacity-100`}>
-          <li className='md:my-0 text-xl '>
+          <li className='my-2 md:my-0 text-xl '>
             <a href="/" className='headerlists rounded-xl'>Home</a>
           </li>
-          <li className='md:my-0 text-xl '>
+          <li className='my-2 md:my-0 text-xl '>
             <a href="/about" className='headerlists rounded-xl' >About</a>
           </li>
-          <li className='md:my-0 text-xl '>
+          <li className='my-2 md:my-0 text-xl '>
           <a href="/events" className='headerlists rounded-xl' >News and Events</a>
           </li>
-          <li className='md:my-0 text-xl '>
+          <li className='my-2 md:my-0 text-xl '>
           <a href="/gallery" className='headerlists rounded-xl'>Gallery</a>
           </li>
-          <li className='md:my-0 text-xl  '>
+          <li className='my-2 md:my-0 text-xl mb-4 md:mb-0'>
             <a href="/contact" className='headerlists rounded-xl' >Contact Us</a>
           </li>
-        </ul>
+         {/* <hr className='bg-black w-full md:hidden' /> */}
+        </ul> 
+        
       </nav>
     </>
   );

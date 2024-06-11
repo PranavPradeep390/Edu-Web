@@ -6,6 +6,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Button from '@mui/material/Button';
 import NavigationOutlinedIcon from '@mui/icons-material/NavigationOutlined';
+import footerimg from '../Assets/footerimg.png'
+
 
 function Footer() {
 
@@ -18,10 +20,10 @@ function Footer() {
     };
   return (
     <>
-   <div className=' bg-slate-500 w-full' style={{backgroundImage:'url("https://i.pngimg.me/thumb/f/720/comrawpixel5990802.jpg")',backgroundSize:"cover"}}>
-        <div className='flex flex-wrap items-center justify-around pt-10'>
+   <div className='bg-slate-100 w-full' style={{backgroundImage:'")',backgroundSize:"cover"}}>
+        <div className=' flex flex-wrap items-center justify-around pt-5 pb-5'>
               <div className='text-center p-3'>
-                <h1 style={{fontWeight:"bold",fontSize:"30px"}}>Sign Up Our Newsletter</h1>
+                <h1 className='text-[#12265a] ' style={{fontWeight:"bold",fontSize:"30px"}}>Sign Up Our Newsletter</h1>
                 <p className='mt-2'>We Offer An Informative Monthly Technology Newsletter - Check It Out.</p>
               </div>
 
@@ -35,9 +37,10 @@ function Footer() {
 
               
         </div> 
+        <hr/>
         <div className='flex flex-wrap ps-10 md:ps-40 pe-10 pt-10 w-full '>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"1.7rem"}}>
-                <p className='capitalize text-2xl font-semibold'>tagore gardens</p>
+                <p className='capitalize text-2xl font-semibold text-[#12265a] '>tagore gardens</p>
                 <p className='text-justify'>Lorem ipsum dolor sit, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <FacebookIcon style={{color:"blue",fontSize:"26px"}}/>
                 <WhatsAppIcon style={{color:"blue",fontSize:"26px"}} className='ms-2 me-2'/>
@@ -46,7 +49,7 @@ function Footer() {
               </div>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
                 <ul className='lg:ps-9'>
-                  <li><b>All Programs</b></li>
+                  <li className='text-[#12265a] '><b>All Programs</b></li>
                   <li>Preschool</li>
                   <li>Kindergarden</li>
                   <li>Middle School</li>
@@ -56,7 +59,7 @@ function Footer() {
               </div>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
                 <ul>
-                  <li><b>Why Choose Tagore KG?</b></li>
+                  <li className='text-[#12265a] '><b>Why Choose Tagore KG?</b></li>
                   <li>Innovative Learning</li>
                   <li>Safe & Nurturing Environment</li>
                   <li>Experienced Educators</li>
@@ -66,26 +69,31 @@ function Footer() {
               </div>
               <div className='w-full sm:w-1/2 lg:w-1/4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
                 <ul>
-                  <li><b>Contact Info</b></li>
+                  <li className='text-[#12265a] '><b>Contact Info</b></li>
                   <li>8086029291</li>
                   <li>tagoregardens@gmail.com</li> 
                   <li>Kumarapuram, Medical College P.O., Thiruvananthapuram-695011</li>
                 </ul>
               </div>
         </div>
-        <div className='w-full bg-sky-800 h-24 flex flex-wrap items-center justify-around text-white font-semibold'>
+        <div className='mt-[-170px]'>
+          <img src={footerimg} alt="" srcset="" />
+        </div>
+        
+        <div className='w-full bg-sky-800 h-24 flex flex-wrap items-center justify-around text-white font-semibold relative'>
       <div><p> 2023 Rainbow - All Rights Reserved.</p></div>
       <div className='flex gap-6 items-center'>
         <div>
           <p>Terms & Conditions Privacy Policy</p>
         </div>
         <div>
-          <button className='w-12 h-10 rounded-lg bg-blue-500' onClick={scrollToTop}>
+          <button className='w-12 h-10 rounded-lg bg-blue-500 absolute right-4 bottom-7' onClick={scrollToTop}>
           <NavigationOutlinedIcon/>
           </button>
         </div>
-      </div>
+      </div> 
         </div>
+       
    </div>
     </>
   )
