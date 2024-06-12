@@ -1,11 +1,12 @@
 import React from 'react'
 import NewsEventsCard from '../Components/NewsEventsCard'
+import sections_bg from '../Assets/sections_bg.png'
 
 function Newsevents() {
   return (
     <>
     <div>
-    <div className='flex-col' style={{ backgroundImage: 'url("https://images.pexels.com/photos/8422104/pexels-photo-8422104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+    <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
     className='text-4xl uppercase mb-2 font-serif'><b>News & Events</b>
     </h1>

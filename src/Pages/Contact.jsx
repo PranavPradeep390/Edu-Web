@@ -15,41 +15,44 @@ function Contact() {
     className='text-xl p-3 bg-yellow-500 rounded-xl text-white'><b>Home - Contact us</b>
     </h1>
 </div>
- 
-<form className=' row flex flex-wrap items-center lg:p-15 p-10'>
 
-    <div className='col-lg-3 lg:p-20 p-5'>
-        <div className='pb-5 pt-5'>
-        <h1 className='text-2xl text-yellow-500'>Our Locations</h1>
-        <p>Hellokids, Maruthankuzhi,<br />
-        Thiruvananthapuram,Kerala.</p>
-        </div>
-        <div className='pb-5'>
-        <h1 className='text-2xl  text-red-500'>Phone Number</h1>
-        <p>8891231789 | 8891232789</p>
-        </div>
-        <div className='pb-5'>
-        <h1 className='text-2xl  text-blue-500'>Email Address</h1>
-        <p>nfo@Hellokidslavender.com</p></div>
-    </div>
-    <div className='col-lg-9 lg:p-20 p-5'>
-
-       <div className='row pb-5'> 
-       <input className='w-full m-1' type="text" placeholder='Name'/>
-       </div>
-
-      <div className='row pb-5'> 
-            <input className='m-1' type="text" placeholder='Phone'/>
-            <input className='mt-5 m-1' type="text" placeholder='Email'/>
+<div className='bg-slate-100'>
+  <h1 className='capitalize text-4xl text-[#12265a] font-serif font-semibold text-center pt-10'>contact our <span className='text-pink-600'>kindergarden</span></h1>
+   
+  <form className=' row flex flex-wrap items-center lg:px-15 px-10'>
+  
+      <div className='col-lg-3 lg:px-20 p-5'>
+          <div className='pb-5 pt-5'>
+          <h1 className='text-2xl font-semibold text-[#12265a] '>Our Locations</h1>
+          <p>TGRA-38, Tagore Gardens, Kumarapuram,<br /> Medical College P.O., Thiruvananthapuram-695011</p>
+          </div>
+          <div className='pb-5'>
+          <h1 className='text-2xl font-semibold  text-[#12265a] '>Phone Number</h1>
+          <p>7736965145 | 8086029291</p>
+          </div>
+          <div className='pb-5'>
+          <h1 className='text-2xl font-semibold  text-[#12265a] '>Email Address</h1>
+          <p>nfo@Hellokidslavender.com</p></div>
       </div>
-
-       <div>
-            <textarea className='w-full m-1' name="" id="" placeholder='Message'></textarea>
-       </div>
-       <button className='p-3 mt-5 m-1' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}><b>Send Message</b></button>
-
-    </div>
-</form>
+      <div className='col-lg-9 lg:p-20 p-5'>
+  
+         <div className='row pb-5'> 
+         <input className='w-full m-1 p-2 rounded-xl' type="text" placeholder='Name'/>
+         </div>
+  
+        <div className='row pb-5'> 
+              <input className='m-1 p-2 rounded-xl' type="text" placeholder='Phone'/>
+              <input className='mt-5 m-1 p-2 rounded-xl' type="text" placeholder='Email'/>
+        </div>
+  
+         <div>
+              <textarea className='w-full m-1 p-2 rounded-xl' name="" id="" placeholder='Message'></textarea>
+         </div>
+         <button className='p-3 mt-5 m-1 rounded-xl' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}><b>Send Message</b></button>
+  
+      </div>
+  </form>
+</div>
 
 <div>
 

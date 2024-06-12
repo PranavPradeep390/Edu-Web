@@ -14,6 +14,9 @@ import Rating from '../Components/Rating';
 import { Autoplay } from 'swiper/modules';
 import Card2 from '../Components/Card2';
 import sections_bg from '../Assets/sections_bg.png'
+import school_bus from '../Assets/school_bus.png'
+import design1 from '../Assets/design1.png'
+import girl_drawing from '../Assets/girl_drawing.jpg'
 
 
 
@@ -43,7 +46,7 @@ function About() {
     },
     { 
       rating: 3, 
-      review: 'Good experience.', 
+      review: 'Good', 
       user: 'User 3', 
       location: 'UK', 
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
@@ -74,8 +77,8 @@ function About() {
       description: 'An average experience. The service was satisfactory but not exceptional.'
     },
     { 
-      rating: 5, 
-      review: 'Highly recommended!', 
+      rating: 4, 
+      review: 'Very Good', 
       user: 'User 7', 
       location: 'Netherlands', 
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
@@ -168,7 +171,7 @@ function About() {
 
       </div>
       <div>
-        <img className='w-[400px]' src="https://html.kodesolution.com/2017/kidspro-html-b5/images/about/6.png" alt="" srcset="" />
+        <img className='w-[400px]' src={school_bus} alt="" srcset="" />
       </div>
     </div>
     <svg
@@ -194,9 +197,7 @@ function About() {
 
 
 {/* progress bar */}
-  <div>
-
-  </div>
+ 
   <div 
     
         ref={ref} 
@@ -260,7 +261,7 @@ function About() {
 
 
 {/* about content 2 */}
-  <div style={{backgroundImage:'url("https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/p2.jpg")'}}>
+  <div style={{backgroundImage:'url(`${girl_drawing}`)'}}>
 
     <svg 
       id="wave" 
@@ -291,7 +292,7 @@ function About() {
           />
        </div>
   
-       <div className='md:w-1/2 p-5 text-center col  border-l-4  border-b-4 border-blue-100 rounded-3xl pb-8 shadow-xl py-10 bg-slate-200'>
+       <div className='md:w-1/2 p-5 text-center col  border-l-4  border-b-4 border-red-500 pb-8 py-10 border-dashed rounded-3xl bg-slate-100' >
          <h1 className=' text-center sm:text-left text-3xl pb-5   text-[#12265a] font-semibold font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
          <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
          <br /><br />
@@ -299,7 +300,7 @@ function About() {
          </p>
        </div>
 </div>
-<div className='w-full'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f2.png" alt="" srcset="" /></div>
+<div className='w-full'><img src={design1} alt="" /></div>
 
      
  </div>
@@ -336,7 +337,7 @@ function About() {
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 20,
         },
       }}
       onSwiper={(swiper) => console.log(swiper)}
@@ -355,7 +356,7 @@ function About() {
           />
         </SwiperSlide>
       ))}
-    </Swiper>
+  </Swiper>
 </div>
 
 {/* <div style={{backgroundColor:"#95c535"}} className='w-full text-center text-white mt-10 p-8 sm:p-16'>

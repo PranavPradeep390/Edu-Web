@@ -25,14 +25,14 @@ function Header() {
 
   return (
     <>
-      <div className="w-full h-30 p-2 bg-purple-400 md:flex flex-wrap items-center justify-around hidden">
-        <div>
+      <div className="w-full h-30 p-2 bg-purple-100 md:flex flex-wrap items-center justify-around hidden">
+        <div className='font-semibold text-[#4b4c4d]  '>
           <span className='me-2'>7736965145</span>
           <span className='me-2'>8086029291</span>
           <span className='me-2'>Time - 9:30 am to 3:00 pm</span>
         </div>
         <div>
-          <p className='capitalize'>TGRA-38, Tagore Gardens, Kumarapuram, Medical College P.O., Thiruvananthapuram-695011</p>
+          <p className='capitalize font-semibold text-[#4b4c4d] '>TGRA-38, Tagore Gardens, Kumarapuram, Medical College P.O., Thiruvananthapuram-695011</p>
         </div>
         {/* <div>
           <span style={{color:"light"}}><FacebookIcon/></span>

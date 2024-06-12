@@ -16,6 +16,20 @@ import school from '../Assets/school.jpg'
 import { Link } from 'react-router-dom';
 import './home.css'
 import React, { useEffect, useRef, useState } from 'react';
+import animals1 from '../Assets/animals1.png'
+import animals2 from '../Assets/animals2.png'
+import animals3 from '../Assets/animals3.png'
+import home_about_child from '../Assets/home_about_child.jpg'
+import home_main from '../Assets/home_main.png'
+import design1 from '../Assets/design1.png'
+import elephant1 from '../Assets/elephant1.png'
+import elephant2 from '../Assets/elephant2.png'
+import elephant3 from '../Assets/elephant3.png'
+import elephant4 from '../Assets/elephant4.png'
+import elephant5 from '../Assets/elephant5.png'
+import elephant6 from '../Assets/elephant6.png'
+import why_choose_us_pic from '../Assets/why_choose_us_pic.png'
+
 
 function Home() {
 
@@ -43,7 +57,7 @@ function Home() {
         },
         { 
           rating: 3, 
-          review: 'Good experience.', 
+          review: 'Good', 
           user: 'User 3', 
           location: 'UK', 
           image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
@@ -179,7 +193,7 @@ function Home() {
     </div>
     
     <div className='mx-auto  sm:w-1/2'>
-     <img src="https://cutesolution.com/html/rainbow2/assets/img/home-font.png" alt="" srcset="" />
+     <img src={home_main} alt="" srcset="" />
     </div>
 
 </div>
@@ -189,7 +203,7 @@ function Home() {
   <div className='w-full flex flex-wrap items-center justify-center bg-[#fafcff] p-10 md:gap-16'>
     <div className='border-2 border-dashed border-green-600 rounded-3xl '>
       <div>
-        <img className='w-[405px] h-[260px] md:w-[500px] md:h-[380px] rounded-3xl relative top-5 left-5' src="https://mobirise.com/extensions/kidsm4/assets/images/children.jpg" alt="" srcset="" />
+        <img className='w-[405px] h-[260px] md:w-[500px] md:h-[380px] rounded-3xl relative top-5 left-5' src={home_about_child} alt="" srcset="" />
       </div>
 
 
@@ -202,7 +216,7 @@ function Home() {
       <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white'><Link to={'/about'}>Read More</Link></button>
     </div>
   </div>
-  <div className='w-full'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f2.png" alt="" srcset="" /></div>
+  <div className='w-full'><img src={design1} alt="" /></div>
 
 {/* 3 cards */}
 
@@ -212,7 +226,7 @@ function Home() {
  <div className=' w-[320px] h-[370px] bg-pink-400 rounded-3xl flex items-center justify-center '>
 
       <div className=' w-[270px] h-[320px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
-        <img className='mt-9' src="https://mobirise.com/extensions/kidsm4/assets/images/animals3.png" alt="" />
+        <img className='mt-9' src={animals1} alt="" />
         <h1 className='text-center font-bold text-3xl text-white mt-6  fontapply'>Playground</h1>
         <p className='text-center font-semibold text-white mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -220,7 +234,7 @@ function Home() {
 
  <div className=' w-[320px] h-[370px] bg-blue-300 rounded-3xl flex items-center justify-center'>
       <div className='  w-[270px] h-[320px] rounded-3xl p-4 border-2 hover:border-4 border-white  border-dashed'>
-        <img className='ms-2 mt-5' src="https://mobirise.com/extensions/kidsm4/assets/images/animals2.png" alt="" />
+        <img className='ms-2 mt-5' src={animals2} alt="" />
         <h1 className='text-center font-bold text-3xl text-white mt-6 fontapply'>Entertainment</h1>
         <p className='text-center font-semibold text-white mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -228,7 +242,7 @@ function Home() {
 
  <div className=' w-[320px] h-[370px] bg-yellow-400 rounded-3xl flex items-center justify-center'>
       <div className=' w-[270px] h-[320px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
-        <img className='ms-8' src="https://mobirise.com/extensions/kidsm4/assets/images/animals1.png" alt="" />
+        <img className='ms-8' src={animals3} alt="" />
         <h1 className='text-center font-bold text-3xl text-white mt-6 fontapply'>Environment</h1>
         <p className='text-center font-semibold text-white mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -254,7 +268,7 @@ function Home() {
         
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant4.png" alt="" />
+           <img className='w-24 h-24' src={elephant1} alt="" />
         </div>
         <div>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Art Classes</h1>
@@ -264,7 +278,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant5.png" alt="" />
+           <img className='w-24 h-24' src={elephant2} alt="" />
         </div>
         <div>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Activity Rooms</h1>
@@ -274,7 +288,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant1.png" alt="" />
+           <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
         <div>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Education</h1>
@@ -284,7 +298,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant3.png" alt="" />
+           <img className='w-24 h-24' src={elephant4} alt="" />
         </div>
         <div>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Languages</h1>
@@ -294,7 +308,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant1.png" alt="" />
+           <img className='w-24 h-24' src={elephant5} alt="" />
         </div>
         <div>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>
@@ -305,7 +319,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant4.png" alt="" />
+           <img className='w-24 h-24' src={elephant6} alt="" />
         </div>
         <div>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Healthy Food</h1>
@@ -315,7 +329,7 @@ function Home() {
         
 
       </div>
-</div>
+  </div>
 
 {/* progress bar */}
 
@@ -340,7 +354,7 @@ function Home() {
       ></path>
     </svg>
   </div>
-     <div 
+  <div 
     
         ref={ref} 
         className='w-full p-8 md:p-4 text-white font-medium text-center flex flex-wrap items-center justify-evenly' style={{backgroundColor:'rgba(209.931, 186.242, 218.941, 1)'}}
@@ -399,7 +413,7 @@ function Home() {
         </div>
   
         
-    </div>
+  </div>
     
 
 {/* gallery */}
@@ -454,7 +468,7 @@ function Home() {
 
 {/* parents rating */}
 
-<div className='mt-9 px-12'>
+<div className='mt-9 px-6'>
   <h1 className='text-center capitalize text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
   <Swiper
       modules={[Autoplay]}
@@ -475,7 +489,7 @@ function Home() {
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 20,
         },
       }}
       onSwiper={(swiper) => console.log(swiper)}
@@ -496,7 +510,7 @@ function Home() {
       ))}
     </Swiper>
 </div>
-<div className='w-full'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f2.png" alt="" srcset="" /></div>
+<div className='w-full'><img src={design1} alt="" srcset="" /></div>
 
 
 
@@ -518,7 +532,7 @@ function Home() {
         
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant4.png" alt="" />
+           <img className='w-24 h-24' src={elephant1} alt="" />
         </div>
         <div className='bg-white p-4 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Innovative Learning</h1>
@@ -528,7 +542,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant5.png" alt="" />
+           <img className='w-24 h-24' src={elephant2} alt="" />
         </div>
         <div className='bg-white p-4 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Safe Enviroment</h1>
@@ -538,7 +552,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant1.png" alt="" />
+           <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
         <div className='bg-white p-4 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Experienced Educators</h1>
@@ -548,7 +562,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant3.png" alt="" />
+           <img className='w-24 h-24' src={elephant4} alt="" />
         </div>
         <div className='bg-white p-4 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Cultural Diversity</h1>
@@ -558,7 +572,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant1.png" alt="" />
+           <img className='w-24 h-24' src={elephant5} alt="" />
         </div>
         <div className='bg-white p-4 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>
@@ -569,7 +583,7 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src="https://mobirise.com/extensions/kidsm4/assets/images/elephant4.png" alt="" />
+           <img className='w-24 h-24' src={elephant6} alt="" />
         </div>
         <div className='bg-white p-4 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Valued Education</h1>
@@ -582,7 +596,7 @@ function Home() {
 
   </div>
 
-  <div className='bg-blue-200'><img src="https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/f1.png" alt="" srcset="" /></div>
+  <div className='bg-blue-200'><img src={why_choose_us_pic} alt="" srcset="" /></div>
 
 
 
