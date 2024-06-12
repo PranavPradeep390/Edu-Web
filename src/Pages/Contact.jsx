@@ -5,16 +5,17 @@ import sections_bg from '../Assets/sections_bg.png'
 function Contact() {
   return (
     <>
-   
 <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
-<h1 
-    className='text-4xl uppercase mb-2 font-serif'><b>contact us</b>
-    </h1>
-  
-    <h1
-    className='text-xl p-3 bg-yellow-500 rounded-xl text-white'><b>Home - Contact us</b>
-    </h1>
-</div>
+ 
+ <h1 
+  className='text-4xl md:text-6xl uppercase font-extrabold mb-2 md:mb-4 text-white ' style={{fontFamily:'cursive'}}>contact
+  </h1>
+
+  <h1
+  className='text-xl p-3 bg-yellow-600 rounded-xl text-white  'style={{fontFamily:'cursive'}}><b>Home - Contact</b>
+  </h1>
+  </div>
+
 
 <div className='bg-slate-100'>
   <h1 className='capitalize text-4xl text-[#12265a] font-serif font-semibold text-center pt-10'>contact our <span className='text-pink-600'>kindergarden</span></h1>
@@ -37,18 +38,18 @@ function Contact() {
       <div className='col-lg-9 lg:p-20 p-5'>
   
          <div className='row pb-5'> 
-         <input className='w-full m-1 p-2 rounded-xl' type="text" placeholder='Name'/>
+         <input className='w-full m-1 p-2 rounded-xl outline-none' type="text" placeholder='Name'/>
          </div>
   
         <div className='row pb-5'> 
-              <input className='m-1 p-2 rounded-xl' type="text" placeholder='Phone'/>
-              <input className='mt-5 m-1 p-2 rounded-xl' type="text" placeholder='Email'/>
+              <input className='m-1 p-2 rounded-xl outline-none' type="text" placeholder='Phone'/>
+              <input className='mt-5 m-1 p-2 rounded-xl outline-none' type="text" placeholder='Email'/>
         </div>
   
          <div>
-              <textarea className='w-full m-1 p-2 rounded-xl' name="" id="" placeholder='Message'></textarea>
+              <textarea className='w-full m-1 p-2 rounded-xl outline-none' name="" id="" placeholder='Message'></textarea>
          </div>
-         <button className='p-3 mt-5 m-1 rounded-xl' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}><b>Send Message</b></button>
+         <button className='p-3 mt-5 m-1 rounded-xl ' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}><b>Send Message</b></button>
   
       </div>
   </form>

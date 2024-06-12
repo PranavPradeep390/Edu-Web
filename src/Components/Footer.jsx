@@ -37,7 +37,7 @@ function Footer() {
 
               
         </div> 
-        <hr/>
+        <hr style={{color:"black"}}/>
         <div className='flex flex-wrap ps-10 md:ps-40 pe-10 pt-10 w-full '>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"1.7rem"}}>
                 <p className='capitalize text-2xl font-semibold text-[#12265a] '>tagore gardens</p>

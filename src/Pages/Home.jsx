@@ -29,6 +29,7 @@ import elephant4 from '../Assets/elephant4.png'
 import elephant5 from '../Assets/elephant5.png'
 import elephant6 from '../Assets/elephant6.png'
 import why_choose_us_pic from '../Assets/why_choose_us_pic.png'
+import shape_bg from '../Assets/shape_bg.png'
 
 
 function Home() {
@@ -468,7 +469,8 @@ function Home() {
 
 {/* parents rating */}
 
-<div className='mt-9 px-6'>
+<div className='mt-9 px-6 ' style={{backgroundImage:`url(${shape_bg})`}}>
+
   <h1 className='text-center capitalize text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
   <Swiper
       modules={[Autoplay]}
@@ -492,8 +494,6 @@ function Home() {
           spaceBetween: 20,
         },
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       {ratingData.map((data, index) => (
         <SwiperSlide key={index}>
@@ -515,7 +515,7 @@ function Home() {
 
 
 {/* exprt teachers */}
-  <div className='md:px-36 px-10' style={{backgroundColor:"white"}}>
+  <div className='md:px-36 px-10'>
   <div className='flex flex-col justify-center items-center'>
     <h1 className=' text-center sm:text-left text-4xl mb-5 mt-9 text-[#12265a] font-semibold font-serif'>Expert Teacher</h1>
     <p className="text-[#777a83] px-36 text-center mb-10 hidden lg:block">Expert teachers possess a deep understanding of their subject matter and pedagogy, allowing them to effectively communicate complex concepts to students. They are adept at identifying individual student needs and tailoring their teaching strategies accordingly.</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import StarIcon from '@mui/icons-material/Star';
 
-function Rating({ rating, review, user, location, image,description }) {
+function Rating({ rating, review, user, image,description }) {
   return (
     <div className='w-[260px] h-[350px] lg:w-[300px] lg:h-[400px]  rounded-2xl text-center p-6 mx-auto m-5 border-t-4 border-y-4 border-green-400'style={{backgroundColor:"#ebeef2"}}>
         <div style={{ color: "goldenrod" }}>

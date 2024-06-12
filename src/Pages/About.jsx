@@ -17,6 +17,7 @@ import sections_bg from '../Assets/sections_bg.png'
 import school_bus from '../Assets/school_bus.png'
 import design1 from '../Assets/design1.png'
 import girl_drawing from '../Assets/girl_drawing.jpg'
+import shape_bg from '../Assets/shape_bg.png'
 
 
 
@@ -101,11 +102,11 @@ function About() {
    {/* about us */}
  <div className='flex-col' style={{ backgroundImage:`url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
-    className='text-4xl uppercase mb-2  font-serif'><b>About Us</b>
+    className='text-4xl md:text-6xl uppercase font-extrabold mb-2 md:mb-4 text-white ' style={{fontFamily:'cursive'}}>About Us
     </h1>
   
     <h1
-    className='text-xl p-3 bg-yellow-500 rounded-xl text-white  font-serif'><b>Home - About us</b>
+    className='text-xl p-3 bg-yellow-600 rounded-xl text-white  'style={{fontFamily:'cursive'}}><b>Home - About us</b>
     </h1>
   </div>
 
@@ -261,7 +262,7 @@ function About() {
 
 
 {/* about content 2 */}
-  <div style={{backgroundImage:'url(`${girl_drawing}`)'}}>
+  <div style={{backgroundColor:"white"}}>
 
     <svg 
       id="wave" 
@@ -287,7 +288,7 @@ function About() {
        <div className="md:w-1/2 ">
           <img 
               className="" 
-              src="https://cutesolution.com/html/rainbow2/assets/img/choose-1.jpg" 
+              src={girl_drawing}
               alt="About"
           />
        </div>
@@ -316,7 +317,7 @@ function About() {
 
 
 {/* rating */}
-<div className='mt-9 px-12'>
+<div className='mt-9 px-12 ' style={{backgroundImage:`url(${shape_bg})`}}>
   <h1 className='text-center capitalize text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
   <Swiper
       modules={[Autoplay]}

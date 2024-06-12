@@ -7,12 +7,13 @@ function Newsevents() {
     <>
     <div>
     <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
-    <h1 
-    className='text-4xl uppercase mb-2 font-serif'><b>News & Events</b>
+ 
+   <h1 
+    className='text-4xl md:text-6xl uppercase font-extrabold mb-2 md:mb-4 text-white ' style={{fontFamily:'cursive'}}>News & Events
     </h1>
   
     <h1
-    className='text-xl p-3 bg-yellow-500 rounded-xl text-white'><b>Home - News & Events</b>
+    className='text-xl p-3 bg-yellow-600 rounded-xl text-white  'style={{fontFamily:'cursive'}}><b>Home - News & Events</b>
     </h1>
     </div>
 
