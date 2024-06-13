@@ -28,10 +28,10 @@ function Footer() {
               </div>
 
               <div className='ps-8 flex flex-wrap items-center'>
-                <input className='mb-2 mt-2 lg:mb-0 lg:mt-0'  type="text" placeholder=' Enter Your Email' style={{width:"320px",height:"36px",outline:"none"}} />
+                <input className='mb-2 mt-2 lg:mb-0 lg:mt-0'  type="text" placeholder=' Enter Your Email' style={{width:"240px",height:"36px",outline:"none"}} />
 
-                <Button variant="contained" className='w-80
-                sm:max-w-36'>Subscribe</Button>
+                <Button variant="contained" className='w-60
+                sm:max-w-14'>Subscribe</Button>
           
               </div>
 

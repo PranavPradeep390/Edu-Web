@@ -4,7 +4,7 @@ import sections_bg from '../Assets/sections_bg.png'
 
 function Contact() {
   return (
-    <>
+    <div className='overflow-x-hidden'>
 <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
  
  <h1 
@@ -60,7 +60,7 @@ function Contact() {
 <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.4921693882093!2d76.87479683922123!3d8.548579991530245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bf9bca82635f%3A0x72d8ed7960ffc184!2sTechnopark%20Phase%203!5e0!3m2!1sen!2sin!4v1716787309117!5m2!1sen!2sin' style={{height:"500px", border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='w-full'/>
 </div>
 
-    </>
+    </div>
   )
 }
 

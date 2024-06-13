@@ -5,7 +5,7 @@ import sections_bg from '../Assets/sections_bg.png'
 
 function Gallery() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
 
 <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
  

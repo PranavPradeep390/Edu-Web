@@ -98,7 +98,7 @@ function About() {
 
   
   return (
-    <>
+    <div className='overflow-x-hidden'>
    {/* about us */}
  <div className='flex-col' style={{ backgroundImage:`url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
@@ -142,7 +142,7 @@ function About() {
     <div className='flex flex-wrap items-center justify-center gap-7 md:gap-20'>
       <div className='ms-10 md:ms-0'>
 
-        <div className='flex items-center gap-5 py-3'>
+        <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
           
           <div className='w-16 h-16 rounded-full bg-blue-300 relative'><EmojiEventsIcon className='absolute top-2 left-2 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
@@ -152,7 +152,7 @@ function About() {
           </div>
         </div> 
 
-        <div className='flex items-center gap-5 py-3'>
+        <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
 
           <div className='w-16 h-16 rounded-full bg-yellow-300 relative'><SchoolIcon className='absolute top-2 left-2 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
@@ -161,7 +161,7 @@ function About() {
           </div>
         </div>
 
-        <div className='flex items-center gap-5 py-3'>
+        <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
           
           <div className='w-16 h-16 rounded-full bg-pink-300 relative'><PersonIcon className='absolute top-2 left-2.5 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
@@ -341,8 +341,6 @@ function About() {
           spaceBetween: 20,
         },
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       {ratingData.map((data, index) => (
         <SwiperSlide key={index}>
@@ -373,7 +371,7 @@ function About() {
 
 </div> */}
  
-    </>
+    </div>
 
   )}
 export default About

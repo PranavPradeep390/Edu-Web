@@ -167,7 +167,7 @@ function Home() {
 
 
   return (
-  <div> 
+  <div className='overflow-x-hidden'> 
 
 {/* home */}
 
@@ -181,7 +181,7 @@ function Home() {
         </p>
         <h2 className='text-5xl capitalize font-bold text-blue-500'>Tagore kindergarden
         </h2>
-        <p className='text-center mt-2  sm:text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat maiores culpa quae officiis, alias adipisci 
+        <p className='text-center mt-2  sm:text-left font-light text-[#777a83]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat maiores culpa quae officiis, alias adipisci 
         </p>
        <div className='flex items-center justify-center gap-5 mt-7 sm:justify-start'>
             <div>
@@ -204,7 +204,7 @@ function Home() {
   <div className='w-full flex flex-wrap items-center justify-center bg-[#fafcff] p-10 md:gap-16'>
     <div className='border-2 border-dashed border-green-600 rounded-3xl '>
       <div>
-        <img className='w-[405px] h-[260px] md:w-[500px] md:h-[380px] rounded-3xl relative top-5 left-5' src={home_about_child} alt="" srcset="" />
+        <img className='w-[360px] h-[230px] md:w-[500px] md:h-[380px] rounded-3xl relative top-5 left-5' src={home_about_child} alt="" srcset="" />
       </div>
 
 
@@ -213,7 +213,7 @@ function Home() {
     <div>
       <h1 className=' text-2xl md:text-4xl text-indigo-950 leading-snug mb-3 font-extrabold mt-8 md:mt-0 font-serif'>Explore <span className='text-blue-600'>Tagore Gardens</span> <br />
       Entertainment</h1>
-      <p className='w-[300px] md:w-[450px] text-justify leading-relaxed mb-3 font-light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui enim, pharetra at auctor vitae.</p>
+      <p className='w-[300px] md:w-[450px] text-justify leading-relaxed mb-3 font-light text-[#777a83]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui enim, pharetra at auctor vitae.</p>
       <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white'><Link to={'/about'}>Read More</Link></button>
     </div>
   </div>
@@ -224,29 +224,31 @@ function Home() {
 <hr className='h-2' />
   <div className='w-full flex flex-wrap items-center justify-center gap-6 py-16 bg-[#eeeeee]'>
 
- <div className=' w-[320px] h-[370px] bg-pink-400 rounded-3xl flex items-center justify-center '>
+ <div className=' w-[270px] h-[285px] md:w-[300px] md:h-[350px] bg-pink-400 rounded-3xl flex items-center justify-center'>
 
-      <div className=' w-[270px] h-[320px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
-        <img className='mt-9' src={animals1} alt="" />
-        <h1 className='text-center font-bold text-3xl text-white mt-6  fontapply'>Playground</h1>
-        <p className='text-center font-semibold text-white mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
+        <img className='w-60' src={animals1} alt="animal1" />
+        <h1 className='text-center font-bold text-3xl text-white mt-8  fontapply'>Playground</h1>
+        <p className='text-center font-semibold text-white mt-4 hidden md:inline-block'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
  </div>
 
- <div className=' w-[320px] h-[370px] bg-blue-300 rounded-3xl flex items-center justify-center'>
-      <div className='  w-[270px] h-[320px] rounded-3xl p-4 border-2 hover:border-4 border-white  border-dashed'>
-        <img className='ms-2 mt-5' src={animals2} alt="" />
-        <h1 className='text-center font-bold text-3xl text-white mt-6 fontapply'>Entertainment</h1>
-        <p className='text-center font-semibold text-white mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <div className=' w-[270px] h-[285px] md:w-[300px] md:h-[350px] bg-blue-400 rounded-3xl flex items-center justify-center'>
+
+      <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
+        <img className='w-52' src={animals2} alt="animal2" />
+        <h1 className='text-center font-bold text-3xl text-white mt-6  fontapply'>Entertainment</h1>
+        <p className='text-center font-semibold text-white mt-4 hidden md:inline-block'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
  </div>
 
- <div className=' w-[320px] h-[370px] bg-yellow-400 rounded-3xl flex items-center justify-center'>
-      <div className=' w-[270px] h-[320px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
-        <img className='ms-8' src={animals3} alt="" />
-        <h1 className='text-center font-bold text-3xl text-white mt-6 fontapply'>Environment</h1>
-        <p className='text-center font-semibold text-white mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+ <div className=' w-[270px] h-[285px] md:w-[300px] md:h-[350px] bg-yellow-400 rounded-3xl flex items-center justify-center'>
+
+      <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
+        <img className='w-44' src={animals3} alt="animal3" />
+        <h1 className='text-center font-bold text-3xl text-white mt-3  fontapply'>Enviroment</h1>
+        <p className='text-center font-semibold text-white mt-4 hidden md:inline-block'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div> 
  </div>
 
   </div>
@@ -259,21 +261,21 @@ function Home() {
 
       <div className='flex flex-col justify-center items-center'>
 
-        <h1 className=' text-center sm:text-left text-6xl mb-6 text-[#12265a] font-semibold font-serif'style={{fontSize:'33px'}}>Tagore Garden Educational </h1>
+        <h1 className=' text-center sm:text-left text-6xl mb-9 text-[#12265a] font-semibold font-serif'style={{fontSize:'33px'}}>Tagore Garden Educational </h1>
 
-        <p className='text-[#777a83] text-center mb-16 md:w-[1000px]' style={{lineHeight:"1.7"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate quae, accusantium laboriosam nemo ratione quam libero,accusan accusantium laboriosam adipisicing elit. Molestiae cupiditate quae, nemo ratione quam libero, accusantium laboriosam</p>
+        <p className='text-[#777a83] text-center mb-16 md:w-[1000px] hidden md:inline-block md:20' style={{lineHeight:"1.7"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate quae, accusantium laboriosam nemo ratione quam libero,accusan accusantium laboriosam adipisicing elit. Molestiae cupiditate quae, nemo ratione quam libero, accusantium laboriosam</p>
 
       </div>
 
-      <div className='flex flex-wrap gap-14 justify-center'>
+      <div className='flex flex-wrap gap-14 justify-between'>
         
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center gap-3 justify-between'>
          <div>
-           <img className='w-24 h-24' src={elephant1} alt="" />
+           <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
         <div>
-            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Art Classes</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Art Classes</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
         </div>
 
@@ -282,8 +284,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant2} alt="" />
         </div>
         <div>
-            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Activity Rooms</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Activity Rooms</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
         </div>
 
@@ -292,8 +294,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
         <div>
-            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Education</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Education</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
         </div>
 
@@ -302,8 +304,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant4} alt="" />
         </div>
         <div>
-            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Languages</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Languages</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
         </div>
 
@@ -312,9 +314,9 @@ function Home() {
            <img className='w-24 h-24' src={elephant5} alt="" />
         </div>
         <div>
-            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>
             Birthday Party</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
         </div>
 
@@ -323,8 +325,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant6} alt="" />
         </div>
         <div>
-            <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Healthy Food</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <h1 className='text-base font-extrabold mb-2 text-[#12265a]'>Healthy Food</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
         </div>
         
@@ -445,11 +447,11 @@ function Home() {
       </h1>
       <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>Expert teachers possess a deep understanding of their subject matter and pedagogy, allowing them to effectively communicate complex concepts to students. They are adept at identifying individual student needs and tailoring their teaching strategies accordingly.</p>
 
-      <div className='w-full flex flex-wrap items-center justify-center gap-9 md:gap-16 px-2 md:px-20'>
+      <div className='w-full flex flex-wrap items-center justify-center gap-3 md:gap-16 px-2 md:px-20'>
         {images.map((image, index) => (
           <div 
             key={index} 
-            className={`border-l-8 border-green-300 rounded-2xl galleryhover ${isVisible ? 'animate-fade-in' : ''}`}
+            className={`md:border-l-8 border-green-300 rounded-2xl galleryhover ${isVisible ? 'animate-fade-in' : ''}`}
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <img 
@@ -524,7 +526,7 @@ function Home() {
   </div>
 
 {/* why choose us */}
-  <div className='flex flex-wrap w-full p-10 row items-center  bg-blue-200'>
+  <div className='flex flex-wrap w-full row items-center bg-blue-200 py-10'>
 
     <h1 className='mx-auto text-4xl mb-11 font-serif text-[#12265a] font-semibold'>Why Choose Us ? </h1>
     
@@ -532,9 +534,9 @@ function Home() {
         
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src={elephant1} alt="" />
+           <img className='w-24 h-24 hidden md:inline-block' src={elephant1} alt="" />
         </div>
-        <div className='bg-white p-4 rounded-2xl'>
+        <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Innovative Learning</h1>
             <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
@@ -542,9 +544,9 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src={elephant2} alt="" />
+           <img className='w-24 h-24 hidden md:inline-block' src={elephant2} alt="" />
         </div>
-        <div className='bg-white p-4 rounded-2xl'>
+        <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Safe Enviroment</h1>
             <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
@@ -552,9 +554,9 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src={elephant3} alt="" />
+           <img className='w-24 h-24 hidden md:inline-block' src={elephant3} alt="" />
         </div>
-        <div className='bg-white p-4 rounded-2xl'>
+        <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Experienced Educators</h1>
             <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
@@ -562,9 +564,9 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src={elephant4} alt="" />
+           <img className='w-24 h-24 hidden md:inline-block' src={elephant4} alt="" />
         </div>
-        <div className='bg-white p-4 rounded-2xl'>
+        <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Cultural Diversity</h1>
             <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
@@ -572,9 +574,9 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src={elephant5} alt="" />
+           <img className='w-24 h-24 hidden md:inline-block' src={elephant5} alt="" />
         </div>
-        <div className='bg-white p-4 rounded-2xl'>
+        <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>
             Interactive Learning</h1>
             <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
@@ -583,9 +585,9 @@ function Home() {
 
         <div className='flex items-center gap-3'>
          <div>
-           <img className='w-24 h-24' src={elephant6} alt="" />
+           <img className='w-24 h-24 hidden md:inline-block' src={elephant6} alt="" />
         </div>
-        <div className='bg-white p-4 rounded-2xl'>
+        <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Valued Education</h1>
             <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
         </div>
