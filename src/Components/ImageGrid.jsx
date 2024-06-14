@@ -1,126 +1,301 @@
 import React, { useEffect, useState } from 'react';
-import './imagegrid.css'; 
+import AxiosInstance from '../Api/AxiosInstance';
 
-const dummyData = [
-    {
-      id: 1,
-      imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 2,
-      imageUrl: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Science Class',
-      category: 'Science'
-    },
-    {
-      id: 3,
-      imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 4,
-      imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 5,
-      imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 6,
-      imageUrl: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Science Class',
-      category: 'Science'
-    },
-    {
-      id: 7,
-      imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 8,
-      imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 9,
-      imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 10,
-      imageUrl: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Science Class',
-      category: 'Science'
-    },
-    {
-      id: 11,
-      imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-    {
-      id: 12,
-      imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Mathematics Class',
-      category: 'Mathematics'
-    },
-];
+const itemsPerPage = 6;
+
+// const dummyData = [
+//   {
+//     id: 1,
+//     imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+   
+//   },
+//   {
+//     id: 2,
+//     imageUrl: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Science Class',
+   
+//   },
+//   {
+//     id: 3,
+//     imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+  
+//   },
+//   {
+//     id: 4,
+//     imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+    
+//   }, {
+//     id: 5,
+//     imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+   
+//   },
+//   {
+//     id: 6,
+//     imageUrl: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Science Class',
+   
+//   },
+//   {
+//     id: 7,
+//     imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+  
+//   },
+//   {
+//     id: 8,
+//     imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+    
+//   },
+//   {
+//     id: 9,
+//     imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+   
+//   },
+//   {
+//     id: 10,
+//     imageUrl: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Science Class',
+   
+//   },
+//   {
+//     id: 11,
+//     imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+  
+//   },
+//   {
+//     id: 12,
+//     imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     title: 'Mathematics Class',
+    
+//   },
+// ];
+//       id: 1,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 2,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Science Class',
+//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+//       author: 'John Doe',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 3,
+//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 4,
+//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 5,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 6,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Science Class',
+//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+//       author: 'John Doe',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 7,
+//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 8,
+//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 9,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 10,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Science Class',
+//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+//       author: 'John Doe',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 11,
+//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 12,
+//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 13,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 14,
+//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Science Class',
+//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+//       author: 'John Doe',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 15,
+//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },
+//     {
+//       id: 16,
+//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//       title: 'Mathematics Class',
+//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//       author: 'Mona George',
+//       authorImageUrl: 'https://picsum.photos/200/300',
+//     },{
+//         id: 17,
+//         imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//         title: 'Mathematics Class',
+//         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//         author: 'Mona George',
+//         authorImageUrl: 'https://picsum.photos/200/300',
+//       },
+//       {
+//         id: 18,
+//         imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//         title: 'Mathematics Class',
+//         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//         author: 'Mona George',
+//         authorImageUrl: 'https://picsum.photos/200/300',
+//       },
+//       {
+//         id: 19,
+//         imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//         title: 'Mathematics Class',
+//         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
+//         author: 'Mona George',
+//         authorImageUrl: 'https://picsum.photos/200/300',
+//       },
+//       {
+//         id: 20,
+//         imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//         title: 'Science Class',
+//         description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+//         author: 'John Doe',
+//         authorImageUrl: 'https://picsum.photos/200/300',
+//       }
+//     // Add more dummy data as needed
+//   ];
 
 function ImageGrid() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('All');
+
+    const [expanded, setExpanded] = useState({});
+
+const [data, setData] = useState([]);
 
   useEffect(() => {
-    setIsVisible(true);
+      const fetchEvents = async () => {
+          try {
+              const response = await AxiosInstance.get('/gallery');
+              console.log(response.data.photos); 
+              setData(response.data.photos);
+          } catch (error) {
+              console.error(error);
+          }
+      };
+      
+      fetchEvents();
   }, []);
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-  };
+const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredData = selectedCategory === 'All' 
-    ? dummyData 
-    : dummyData.filter(data => data.category === selectedCategory);
+    const totalPages = Math.ceil(data.length / itemsPerPage);
 
-  return (
-    <>
-      <div className="button-group text-center mb-8">
-        <button className="filter-button" onClick={() => handleCategoryChange('All')}>All</button>
-        <button className="filter-button" onClick={() => handleCategoryChange('Mathematics')}>Mathematics</button>
-        <button className="filter-button" onClick={() => handleCategoryChange('Science')}>Science</button>
-      </div>
+    const handleNextPage = () => {
+        setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+    };
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-14">
-        {filteredData.map((data, index) => (
-          <div key={index} className={`image-container ${isVisible ? 'visible' : ''}`}>
-            <div
-              className="image-wrapper shadow-2xl relative"
-              style={{ 
-                backgroundImage: `url(${data.imageUrl})`, 
-                backgroundSize: "cover", 
-                backgroundPosition: "center",  
-                minHeight: "300px" 
-              }}
-              onMouseEnter={(e) => e.currentTarget.querySelector('.p-container').classList.add('visible')}
-              onMouseLeave={(e) => e.currentTarget.querySelector('.p-container').classList.remove('visible')}
-            >
-              <p className='p-container text-3xl font-semibold capitalize text-center absolute bottom-28 left-0 right-0 mb-4 p-2 ms-2 me-2 rounded-lg bg-white'>{data.title}</p>
+    const handlePrevPage = () => {
+        setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+    };
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentItems = data.slice(startIndex, startIndex + itemsPerPage);
+
+    return (
+        <div className='flex flex-col items-center'>
+            <div className='flex flex-wrap gap-6 items-center justify-center'>
+                {currentItems.map((event, index) => (
+                    <div className='w-[300px] h-[345px] md:w-[400px] md:h-[400px] border-8 border-white-900 rounded-xl' key={index}>
+
+                        <img className='w-full h-full rounded-xl' src={event.imageUrl} alt={event.id} />
+
+                    </div>
+                ))}
             </div>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-}
+
+
+            <div className='mt-4 flex'>
+                <button onClick={handlePrevPage} disabled={currentPage === 1} className='px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50 mr-2'>
+                    Previous
+                </button>
+                <button onClick={handleNextPage} disabled={currentPage === totalPages} className='px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50'>
+                    Next
+                </button>
+            </div>
+
+        </div>
+    );
+};
 
 export default ImageGrid;

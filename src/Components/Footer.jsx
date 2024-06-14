@@ -2,9 +2,8 @@ import React from 'react'
 // import Button from 'react-bootstrap/Button';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import Button from '@mui/material/Button';
 import NavigationOutlinedIcon from '@mui/icons-material/NavigationOutlined';
 import footerimg from '../Assets/footerimg.png'
 
@@ -21,7 +20,7 @@ function Footer() {
   return (
     <>
    <div className='bg-slate-100 w-full' style={{backgroundImage:'")',backgroundSize:"cover"}}>
-        <div className=' flex flex-wrap items-center justify-around pt-5 pb-5'>
+        {/* <div className=' flex flex-wrap items-center justify-around pt-5 pb-5'>
               <div className='text-center p-3'>
                 <h1 className='text-[#12265a] ' style={{fontWeight:"bold",fontSize:"30px"}}>Sign Up Our Newsletter</h1>
                 <p className='mt-2'>We Offer An Informative Monthly Technology Newsletter - Check It Out.</p>
@@ -36,7 +35,7 @@ function Footer() {
               </div>
 
               
-        </div> 
+        </div>  */}
         <hr style={{color:"black"}}/>
         <div className='flex flex-wrap ps-10 md:ps-40 pe-10 pt-10 w-full '>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"1.7rem"}}>
@@ -44,7 +43,7 @@ function Footer() {
                 <p className='text-justify'>Lorem ipsum dolor sit, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <FacebookIcon style={{color:"blue",fontSize:"26px"}}/>
                 <WhatsAppIcon style={{color:"blue",fontSize:"26px"}} className='ms-2 me-2'/>
-                <LinkedInIcon style={{color:"blue",fontSize:"26px"}} className='me-2'/>
+                <InstagramIcon style={{color:"blue",fontSize:"26px"}} className='me-2'/>
                 <YouTubeIcon style={{color:"blue",fontSize:"26px"}}/>
               </div>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>

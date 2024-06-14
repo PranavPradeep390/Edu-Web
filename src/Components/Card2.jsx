@@ -1,28 +1,30 @@
 import React from 'react';
+import user_dummy from '../Assets/user_dummy.jpg'
+
 
 const dummyData = [
   {
     id: 1,
-    imageUrl: 'https://preview.colorlib.com/theme/kindergarten/assets/img/gallery/team2.png',
-    title: 'Ava Farrington',
+    imageUrl:user_dummy,
+    title: 'lorem ipsum',
     description: 'Teacher',
   },
   {
     id: 2,
-    imageUrl: 'https://preview.colorlib.com/theme/kindergarten/assets/img/gallery/team1.png',
-    title: 'Fulton Farrington',
+    imageUrl: user_dummy,
+    title: 'lorem ipsum',
     description: 'Teacher',
   },
   {
     id: 3,
-    imageUrl: 'https://preview.colorlib.com/theme/kindergarten/assets/img/gallery/team3.png',
-    title: 'Alishia Fulton',
+    imageUrl:user_dummy,
+    title: 'lorem ipsum',
     description: 'Teacher',
   },
   {
     id: 4,
-    imageUrl: 'https://preview.colorlib.com/theme/kindergarten/assets/img/gallery/team1.png',
-    title: 'Lucas Martinez',
+    imageUrl: user_dummy,
+    title: 'lorem ipsum',
     description: 'Teacher',
   },
   // Add more dummy data as needed

@@ -6,19 +6,14 @@ import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
 import { CircularProgress } from '@mui/material';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Rating from '../Components/Rating';
-// import Button from '@mui/material/Button';
-import { Autoplay } from 'swiper/modules';
-import Card2 from '../Components/Card2';
 import sections_bg from '../Assets/sections_bg.png'
 import school_bus from '../Assets/school_bus.png'
 import design1 from '../Assets/design1.png'
 import girl_drawing from '../Assets/girl_drawing.jpg'
-import shape_bg from '../Assets/shape_bg.png'
-
+import RatingSwiper from '../Components/RatingSwiper';
+import ExpertTeachers from '../Components/ExpertTeachers';
 
 
 function About() {
@@ -28,73 +23,6 @@ function About() {
     threshold: .5,
   });
 
-  const ratingData = [
-    { 
-      rating: 5, 
-      review: 'Great service!', 
-      user: 'User 1', 
-      location: 'Germany', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'The service exceeded my expectations. Highly professional and efficient.'
-    },
-    { 
-      rating: 4, 
-      review: 'Very satisfied!', 
-      user: 'User 2', 
-      location: 'USA', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'Good experience overall. Prompt service and friendly staff.'
-    },
-    { 
-      rating: 3, 
-      review: 'Good', 
-      user: 'User 3', 
-      location: 'UK', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'The service was decent, though there is room for improvement in some areas.'
-    },
-    { 
-      rating: 5, 
-      review: 'Excellent!', 
-      user: 'User 4', 
-      location: 'France', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'Absolutely outstanding service! I would definitely recommend it to others.'
-    },
-    { 
-      rating: 4, 
-      review: 'Very good!', 
-      user: 'User 5', 
-      location: 'Italy', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'Very happy with the service. The team was professional and courteous.'
-    },
-    { 
-      rating: 3, 
-      review: 'Satisfied.', 
-      user: 'User 6', 
-      location: 'Spain', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'An average experience. The service was satisfactory but not exceptional.'
-    },
-    { 
-      rating: 4, 
-      review: 'Very Good', 
-      user: 'User 7', 
-      location: 'Netherlands', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'Phenomenal service! I am extremely pleased and will use it again.'
-    },
-    { 
-      rating: 4, 
-      review: 'Good job!', 
-      user: 'User 8', 
-      location: 'Belgium', 
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      description: 'Great job by the team. I am very satisfied with the outcome.'
-    },
-  ];
-  
 
   
   return (
@@ -110,26 +38,6 @@ function About() {
     </h1>
   </div>
 
-     
-  {/* <div className='flex flex-wrap w-full p-10  items-center'>
-     
-
-      <div className='md:w-1/2 p-5 text-center col  border-r-8  border-b-8 border-amber-400 rounded-3xl pb-8 shadow-xl py-10' style={{ backgroundColor: '#f0ebeb' }}>
-        <h1 className=' text-center sm:text-left text-3xl pb-5  text-[#404040] font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
-        <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        <br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
-
-      <div className="md:w-1/2 p-5 ">
-    <img 
-        className="" 
-        src="https://hellokidsmaruthankuzhi.com/images/about/about.png" 
-        alt="About"
-    />
-     </div>
-  </div> */}
 
 {/* about content */}
   <div className='w-full bg-[#f2f6ff]'>
@@ -198,7 +106,6 @@ function About() {
 
 
 {/* progress bar */}
- 
   <div 
     
         ref={ref} 
@@ -307,71 +214,13 @@ function About() {
  </div>
 
  {/* exprt teachers */}
-  <div className='md:px-36 px-10' style={{backgroundColor:"white"}}>
-  <div className='flex flex-col justify-center items-center'>
-    <h1 className=' text-center sm:text-left text-4xl mb-5 mt-9 text-[#12265a] font-semibold font-serif'>Expert Teacher</h1>
-    <p className="text-[#777a83] px-36 text-center mb-10 hidden lg:block">Expert teachers possess a deep understanding of their subject matter and pedagogy, allowing them to effectively communicate complex concepts to students. They are adept at identifying individual student needs and tailoring their teaching strategies accordingly.</p>
-    </div>
-  <Card2/>
-  </div>
+<ExpertTeachers/>
 
 
 {/* rating */}
-<div className='mt-9 px-12 ' style={{backgroundImage:`url(${shape_bg})`}}>
-  <h1 className='text-center capitalize text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
-  <Swiper
-      modules={[Autoplay]}
-      spaceBetween={37}
-      autoplay={{ delay: 2000 }}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      }}
-    >
-      {ratingData.map((data, index) => (
-        <SwiperSlide key={index}>
-          <Rating
-            rating={data.rating}
-            review={data.review}
-            user={data.user}
-            location={data.location}
-            image={data.image}
-            description={data.description}
-
-          />
-        </SwiperSlide>
-      ))}
-  </Swiper>
-</div>
-
-{/* <div style={{backgroundColor:"#95c535"}} className='w-full text-center text-white mt-10 p-8 sm:p-16'>
-
-  <p className='uppercase pb-2 sm:p-4 text-xs sm:text-base font-semibold' >contact us for a free consultation</p>
-   <h1 className='capitalize text-lg sm:text-4xl  sm:p-5 font-serif'><b>let's talk about opportunities</b></h1>
-   <p className='p-1 sm:p-4 sm:text-base w-1/2 mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio unde velit obcaecati id quasi temporibus. Delectus, pariatur cumque nostrum minima, expedita, nesciunt ad nisi magni natus voluptas omnis. Quibusdam?</p>
-
-   <div className=' mt-2 flex items-center justify-center gap-10'>
-      <button className='bg-blue-500 p-3 rounded-3xl text-xs sm:text-lg'>Call Now</button>
-      <button className='bg-white p-3 rounded-3xl text-xs sm:text-lg text-blue-500'>Contact Us</button>
-   </div>
-
-</div> */}
+  <RatingSwiper/>
  
-    </div>
+</div>
 
   )}
 export default About

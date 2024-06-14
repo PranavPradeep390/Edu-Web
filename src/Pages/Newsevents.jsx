@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NewsEventsCard from '../Components/NewsEventsCard'
 import sections_bg from '../Assets/sections_bg.png'
+import bg2 from '../Assets/bg2.jpg'
 
 function Newsevents() {
+
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden' style={{ backgroundImage:` url(${bg2})`}}>
     <div>
     <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
  
@@ -17,7 +19,7 @@ function Newsevents() {
     </h1>
     </div>
 
-    <div className='p-24'>
+    <div className='p-14'>
       
       <NewsEventsCard/>
       
@@ -25,6 +27,7 @@ function Newsevents() {
     
 
     </div>
+
     </div>
   )
 }

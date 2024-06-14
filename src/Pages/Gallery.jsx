@@ -2,10 +2,12 @@
 import React from 'react'
 import ImageGrid from '../Components/ImageGrid'
 import sections_bg from '../Assets/sections_bg.png'
+import bg2 from '../Assets/bg2.jpg'
+
 
 function Gallery() {
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden' style={{ backgroundImage:` url(${bg2})`}}>
 
 <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
  
@@ -17,10 +19,8 @@ function Gallery() {
   className='text-xl p-3 bg-yellow-600 rounded-xl text-white  'style={{fontFamily:'cursive'}}><b>Home - Gallery</b>
   </h1>
   </div>
-
-<ImageGrid/>
-
-    </div>
+<div className='p-24'><ImageGrid/></div>
+  </div>
   )
 }
 

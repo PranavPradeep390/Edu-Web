@@ -1,4 +1,3 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CircularProgress } from '@mui/material';
@@ -8,9 +7,7 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
-import Card2 from '../Components/Card2';
-import Rating from '../Components/Rating';
-import { Autoplay } from 'swiper/modules';
+// import Rating from '../Components/Rating';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import school from '../Assets/school.jpg'
 import { Link } from 'react-router-dom';
@@ -29,7 +26,10 @@ import elephant4 from '../Assets/elephant4.png'
 import elephant5 from '../Assets/elephant5.png'
 import elephant6 from '../Assets/elephant6.png'
 import why_choose_us_pic from '../Assets/why_choose_us_pic.png'
-import shape_bg from '../Assets/shape_bg.png'
+import RatingSwiper from '../Components/RatingSwiper';
+import ExpertTeachers from '../Components/ExpertTeachers';
+import AxiosInstance from '../Api/AxiosInstance';
+import bg2 from '../Assets/bg2.jpg'
 
 
 function Home() {
@@ -39,107 +39,128 @@ function Home() {
         threshold: .5,
       });
 
-      const ratingData = [
-        { 
-          rating: 5, 
-          review: 'Great service!', 
-          user: 'User 1', 
-          location: 'Germany', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'The service exceeded my expectations. Highly professional and efficient.'
-        },
-        { 
-          rating: 4, 
-          review: 'Very satisfied!', 
-          user: 'User 2', 
-          location: 'USA', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'Good experience overall. Prompt service and friendly staff.'
-        },
-        { 
-          rating: 3, 
-          review: 'Good', 
-          user: 'User 3', 
-          location: 'UK', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'The service was decent, though there is room for improvement in some areas.'
-        },
-        { 
-          rating: 5, 
-          review: 'Excellent!', 
-          user: 'User 4', 
-          location: 'France', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'Absolutely outstanding service! I would definitely recommend it to others.'
-        },
-        { 
-          rating: 4, 
-          review: 'Very good!', 
-          user: 'User 5', 
-          location: 'Italy', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'Very happy with the service. The team was professional and courteous.'
-        },
-        { 
-          rating: 3, 
-          review: 'Satisfied.', 
-          user: 'User 6', 
-          location: 'Spain', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'An average experience. The service was satisfactory but not exceptional.'
-        },
-        { 
-          rating: 4, 
-          review: 'Very Good', 
-          user: 'User 7', 
-          location: 'Netherlands', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'Phenomenal service! I am extremely pleased and will use it again.'
-        },
-        { 
-          rating: 4, 
-          review: 'Good job!', 
-          user: 'User 8', 
-          location: 'Belgium', 
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-          description: 'Great job by the team. I am very satisfied with the outcome.'
-        },
-      ];
+      // const ratingData = [
+      //   { 
+      //     rating: 5, 
+      //     review: 'Great service!', 
+      //     user: 'User 1', 
+      //     location: 'Germany', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'The service exceeded my expectations. Highly professional and efficient.'
+      //   },
+      //   { 
+      //     rating: 4, 
+      //     review: 'Very satisfied!', 
+      //     user: 'User 2', 
+      //     location: 'USA', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'Good experience overall. Prompt service and friendly staff.'
+      //   },
+      //   { 
+      //     rating: 3, 
+      //     review: 'Good', 
+      //     user: 'User 3', 
+      //     location: 'UK', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'The service was decent, though there is room for improvement in some areas.'
+      //   },
+      //   { 
+      //     rating: 5, 
+      //     review: 'Excellent!', 
+      //     user: 'User 4', 
+      //     location: 'France', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'Absolutely outstanding service! I would definitely recommend it to others.'
+      //   },
+      //   { 
+      //     rating: 4, 
+      //     review: 'Very good!', 
+      //     user: 'User 5', 
+      //     location: 'Italy', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'Very happy with the service. The team was professional and courteous.'
+      //   },
+      //   { 
+      //     rating: 3, 
+      //     review: 'Satisfied.', 
+      //     user: 'User 6', 
+      //     location: 'Spain', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'An average experience. The service was satisfactory but not exceptional.'
+      //   },
+      //   { 
+      //     rating: 4, 
+      //     review: 'Very Good', 
+      //     user: 'User 7', 
+      //     location: 'Netherlands', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'Phenomenal service! I am extremely pleased and will use it again.'
+      //   },
+      //   { 
+      //     rating: 4, 
+      //     review: 'Good job!', 
+      //     user: 'User 8', 
+      //     location: 'Belgium', 
+      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
+      //     description: 'Great job by the team. I am very satisfied with the outcome.'
+      //   },
+      // ];
 
-      const images = [
-        {
-          src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 1"
-        },
-        {
-          src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 2"
-        },
-        {
-          src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 3"
-        },
-        {
-          src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 4"
-        },
-        {
-          src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 5"
-        },
-        {
-          src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 6"
-        },
-        {
-          src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 7"
-        },
-        {
-          src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          alt: "Image 8"
-        }
-      ];
+      // const images = [
+      //   {
+      //     src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 1"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 2"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 3"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 4"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 5"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 6"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 7"
+      //   },
+      //   {
+      //     src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      //     alt: "Image 8"
+      //   }
+      // ];
+
+
+
+      const [data, setData] = useState([]);
+
+  useEffect(() => {
+      const fetchEvents = async () => {
+          try {
+              const response = await AxiosInstance.get('/gallery');
+              console.log(response.data.photos); 
+              setData(response.data.photos);
+          } catch (error) {
+              console.error(error);
+          }
+      };
+      
+      fetchEvents();
+  }, []);
+
+  const limitedImages = data.slice(0, 8);
+
 
       const [isVisible, setIsVisible] = useState(false);
   const galleryRef = useRef(null);
@@ -166,6 +187,7 @@ function Home() {
   }, []);
 
 
+
   return (
   <div className='overflow-x-hidden'> 
 
@@ -179,9 +201,9 @@ function Home() {
           <span className='text-blue-500 font-semibold'>LEARN</span>
           <span className='text-green-500 font-semibold'>. GROW</span>
         </p>
-        <h2 className='text-5xl capitalize font-bold text-blue-500'>Tagore kindergarden
+        <h2 className='text-5xl capitalize font-bold text-blue-500'>Tagore kindergarten
         </h2>
-        <p className='text-center mt-2  sm:text-left font-light text-[#777a83]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat maiores culpa quae officiis, alias adipisci 
+        <p className='text-center mt-2  sm:text-left font-light text-[#1d1d1d] text-xl'>Where every day is an adventure in learning
         </p>
        <div className='flex items-center justify-center gap-5 mt-7 sm:justify-start'>
             <div>
@@ -261,7 +283,7 @@ function Home() {
 
       <div className='flex flex-col justify-center items-center'>
 
-        <h1 className=' text-center sm:text-left text-6xl mb-9 text-[#12265a] font-semibold font-serif'style={{fontSize:'33px'}}>Tagore Garden Educational </h1>
+        <h1 className=' text-center sm:text-left text-6xl mb-9 text-[#12265a] font-semibold font-serif'style={{fontSize:'33px'}}>Tagore Gardens Educational </h1>
 
         <p className='text-[#777a83] text-center mb-16 md:w-[1000px] hidden md:inline-block md:20' style={{lineHeight:"1.7"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate quae, accusantium laboriosam nemo ratione quam libero,accusan accusantium laboriosam adipisicing elit. Molestiae cupiditate quae, nemo ratione quam libero, accusantium laboriosam</p>
 
@@ -421,7 +443,7 @@ function Home() {
 
 {/* gallery */}
 
-<div className='w-full' ref={galleryRef} style={{backgroundImage:'url("https://html.kodesolution.com/2017/kidspro-html-b5/images/bg/p2.jpg")',backgroundSize:"contain"}}>
+<div className='w-full' ref={galleryRef} style={{backgroundImage:`url(${bg2})`,backgroundSize:"contain"}}>
     <svg 
       id="wave" 
       style={{ transform: "rotate(180deg)", transition: "0.3s" }} 
@@ -442,21 +464,22 @@ function Home() {
       />
     </svg>
       <h1 className={`capitalize text-center text-4xl font-serif font-semibold text-[#12265a]  py-5 ${isVisible ? 'animate-fade-in' : ''}`}>
-        gallery
+       kindergarten gallery
         
       </h1>
       <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>Expert teachers possess a deep understanding of their subject matter and pedagogy, allowing them to effectively communicate complex concepts to students. They are adept at identifying individual student needs and tailoring their teaching strategies accordingly.</p>
 
       <div className='w-full flex flex-wrap items-center justify-center gap-3 md:gap-16 px-2 md:px-20'>
-        {images.map((image, index) => (
+
+        {limitedImages.map((image, index) => (
           <div 
             key={index} 
             className={`md:border-l-8 border-green-300 rounded-2xl galleryhover ${isVisible ? 'animate-fade-in' : ''}`}
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <img 
-              src={image.src} 
-              alt={image.alt} 
+              src={image.name} 
+              alt={image.id} 
               className='h-[100px] w-[150px] md:h-[220px] md:w-[250px] rounded-lg shadow-lg' 
             />
           </div>
@@ -470,60 +493,13 @@ function Home() {
   </div>
 
 {/* parents rating */}
-
-<div className='mt-9 px-6 ' style={{backgroundImage:`url(${shape_bg})`}}>
-
-  <h1 className='text-center capitalize text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
-  <Swiper
-      modules={[Autoplay]}
-      spaceBetween={37}
-      autoplay={{ delay: 2000 }}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      }}
-    >
-      {ratingData.map((data, index) => (
-        <SwiperSlide key={index}>
-          <Rating
-            rating={data.rating}
-            review={data.review}
-            user={data.user}
-            location={data.location}
-            image={data.image}
-            description={data.description}
-
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-</div>
+  <RatingSwiper/>
 <div className='w-full'><img src={design1} alt="" srcset="" /></div>
 
 
 
 {/* exprt teachers */}
-  <div className='md:px-36 px-10'>
-  <div className='flex flex-col justify-center items-center'>
-    <h1 className=' text-center sm:text-left text-4xl mb-5 mt-9 text-[#12265a] font-semibold font-serif'>Expert Teacher</h1>
-    <p className="text-[#777a83] px-36 text-center mb-10 hidden lg:block">Expert teachers possess a deep understanding of their subject matter and pedagogy, allowing them to effectively communicate complex concepts to students. They are adept at identifying individual student needs and tailoring their teaching strategies accordingly.</p>
-    </div>
-  <Card2/>
-  </div>
+  <ExpertTeachers/>
 
 {/* why choose us */}
   <div className='flex flex-wrap w-full row items-center bg-blue-200 py-10'>
