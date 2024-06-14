@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AxiosInstance from '../Api/AxiosInstance';
 
-const itemsPerPage = 6;
+const itemsPerPage = 12;
 
 // const dummyData = [
 //   {
@@ -276,9 +276,9 @@ const [currentPage, setCurrentPage] = useState(1);
         <div className='flex flex-col items-center'>
             <div className='flex flex-wrap gap-6 items-center justify-center'>
                 {currentItems.map((event, index) => (
-                    <div className='w-[300px] h-[345px] md:w-[400px] md:h-[400px] border-8 border-white-900 rounded-xl' key={index}>
+                    <div className='w-[300px] h-[345px] md:w-[300px] md:h-[300px] hover:border-dashed hover:border-slate-300 border-8 border-white-900 rounded-xl' key={index}>
 
-                        <img className='w-full h-full rounded-xl' src={event.imageUrl} alt={event.id} />
+                        <img className='w-full h-full rounded' src={event.imageUrl} alt={event.id} />
 
                     </div>
                 ))}

@@ -20,7 +20,8 @@ function Newsevents() {
     </div>
 
     <div className='p-14'>
-      
+    <h1 className='font-serif text-[#12265a] text-center text-2xl md:text-4xl capitalize mb-8' >explore kindergarten's news & events</h1>
+
       <NewsEventsCard/>
       
     </div>

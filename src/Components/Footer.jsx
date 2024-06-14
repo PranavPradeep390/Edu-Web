@@ -5,7 +5,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import NavigationOutlinedIcon from '@mui/icons-material/NavigationOutlined';
-import footerimg from '../Assets/footerimg.png'
+import footer1 from '../Assets/footer1.png'
 
 
 function Footer() {
@@ -39,16 +39,16 @@ function Footer() {
         <hr style={{color:"black"}}/>
         <div className='flex flex-wrap ps-10 md:ps-40 pe-10 pt-10 w-full '>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"1.7rem"}}>
-                <p className='capitalize text-2xl font-semibold text-[#12265a] '>tagore gardens</p>
-                <p className='text-justify'>Lorem ipsum dolor sit, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className='capitalize text-2xl font-semibold text-[#12265a] font-serif'>tagore gardens</p>
+                <p className='text-justify text-[#444547] mb-2'>Lorem ipsum dolor sit, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna.</p>
                 <FacebookIcon style={{color:"blue",fontSize:"26px"}}/>
                 <WhatsAppIcon style={{color:"blue",fontSize:"26px"}} className='ms-2 me-2'/>
                 <InstagramIcon style={{color:"blue",fontSize:"26px"}} className='me-2'/>
                 <YouTubeIcon style={{color:"blue",fontSize:"26px"}}/>
               </div>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
-                <ul className='lg:ps-9'>
-                  <li className='text-[#12265a] '><b>All Programs</b></li>
+                <ul className='lg:ps-9 text-[#444547]'>
+                  <li className='text-[#12265a] font-serif '><b>All Programs</b></li>
                   <li>Preschool</li>
                   <li>Kindergarden</li>
                   <li>Middle School</li>
@@ -57,8 +57,8 @@ function Footer() {
                 </ul>
               </div>
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
-                <ul>
-                  <li className='text-[#12265a] '><b>Why Choose Tagore KG?</b></li>
+                <ul className='text-[#444547]'>
+                  <li className='text-[#12265a] font-serif '><b>Why Choose Tagore KG?</b></li>
                   <li>Innovative Learning</li>
                   <li>Safe & Nurturing Environment</li>
                   <li>Experienced Educators</li>
@@ -67,8 +67,8 @@ function Footer() {
                 </ul>
               </div>
               <div className='w-full sm:w-1/2 lg:w-1/4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
-                <ul>
-                  <li className='text-[#12265a] '><b>Contact Info</b></li>
+                <ul className='text-[#444547]'>
+                  <li className='text-[#12265a]  font-serif'><b>Contact Info</b></li>
                   <li>8086029291</li>
                   <li>tagoregardens@gmail.com</li> 
                   <li>Kumarapuram, Medical College P.O., Thiruvananthapuram-695011</li>
@@ -76,7 +76,7 @@ function Footer() {
               </div>
         </div>
         <div className='mt-[-40px] md:mt-[-180px]'>
-          <img src={footerimg} alt="" srcset="" />
+          <img src={footer1} alt="" srcset="" />
         </div>
         
         <div className='w-full bg-sky-800 h-24 flex flex-wrap items-center justify-around text-white font-semibold relative'>

@@ -19,7 +19,10 @@ function Gallery() {
   className='text-xl p-3 bg-yellow-600 rounded-xl text-white  'style={{fontFamily:'cursive'}}><b>Home - Gallery</b>
   </h1>
   </div>
-<div className='p-24'><ImageGrid/></div>
+<div className='px-24 py-8'>
+  <h1 className='font-serif text-[#12265a] text-center text-2xl md:text-4xl capitalize mb-8' >explore kindergarten's gallery</h1>
+  <ImageGrid/>
+  </div>
   </div>
   )
 }
