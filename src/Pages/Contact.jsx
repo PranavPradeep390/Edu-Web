@@ -1,8 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import sections_bg from '../Assets/sections_bg.png'
-
+import AxiosInstance from '../Api/AxiosInstance';
 
 function Contact() {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+  });
+
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.phone || !formData.email || !formData.message) {
+      setErrorMessage('Please fill out all fields.');
+      return;
+    }
+
+    try {
+      setErrorMessage('');
+
+      const response = await AxiosInstance.post('/create', formData);
+
+      console.log('Form Data Submitted:', response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  
   return (
     <div className='overflow-x-hidden'>
 <div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
@@ -35,21 +74,64 @@ function Contact() {
           <h1 className='text-2xl font-semibold  text-[#12265a] '>Email Address</h1>
           <p>nfo@Hellokidslavender.com</p></div>
       </div>
+
       <div className='col-lg-9 lg:p-20 p-5'>
   
          <div className='row pb-5'> 
-         <input className='w-full m-1 p-2 rounded-xl outline-none' type="text" placeholder='Name'/>
-         </div>
+         <input
+            className='w-full m-1 p-2 rounded-xl outline-none'
+            type='text'
+            name='name'
+            placeholder='Name'
+            value={formData.name}
+            onChange={handleChange}
+            required
+
+          />         
+          
+          </div>
   
         <div className='row pb-5'> 
-              <input className='m-1 p-2 rounded-xl outline-none' type="text" placeholder='Phone'/>
-              <input className='mt-5 m-1 p-2 rounded-xl outline-none' type="text" placeholder='Email'/>
+        <input
+            className='m-1 p-2 rounded-xl outline-none'
+            type='number'
+            name='phone'
+            placeholder='Phone'
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />               
+          <input
+          className='mt-5 m-1 p-2 rounded-xl outline-none'
+          type='email'
+          name='email'
+          placeholder='Email'
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
         </div>
   
          <div>
-              <textarea className='w-full m-1 p-2 rounded-xl outline-none' name="" id="" placeholder='Message'></textarea>
+         <textarea
+            className='w-full m-1 p-2 rounded-xl outline-none'
+            name='message'
+            placeholder='Message'
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
          </div>
-         <button className='p-3 mt-5 m-1 rounded-xl ' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}><b>Send Message</b></button>
+
+
+        {errorMessage && (
+          <div style={{ color: 'red', marginTop: '10px' }}>
+            {errorMessage}
+          </div>
+        )}
+
+         <button className='p-3 mt-5 m-1 rounded-xl ' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}
+         onClick={handleSubmit}><b>Send Message</b></button>
   
       </div>
   </form>

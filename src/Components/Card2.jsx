@@ -6,8 +6,11 @@ const dummyData = [
   {
     id: 1,
     imageUrl:user_dummy,
-    title: 'lorem ipsum',
-    description: 'Teacher',
+    title: 'Bushra B.A.',
+    description: 'Principal',
+    phone: 7736965145,
+    qualification:'B.sc ,B.Ed',
+    experience :"25 years experience in india &abroad"
   },
   {
     id: 2,
