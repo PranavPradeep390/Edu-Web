@@ -289,9 +289,9 @@ function Home() {
 
       </div>
 
-      <div className='flex flex-wrap gap-14 justify-around'>
+      <div className='flex flex-wrap gap-14 justify-evenly'>
         
-        <div className='flex items-center gap-3 justify-between'>
+        <div className='flex items-center gap-3'>
          <div>
            <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
