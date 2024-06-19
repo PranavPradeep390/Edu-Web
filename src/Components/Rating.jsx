@@ -19,7 +19,7 @@ function Rating({ image, name, designation, description,date }) {
                 <p className='bg-white p-2  rounded-2xl font italic w-60 '>"{description}"</p>
                 {/* <ChatBubbleIcon className=''/> */}
            </div>
-           <p className='absolute bottom-4 font-light'>{date}</p>
+           <p className='absolute text-zinc-400 bottom-4 font-light'>{date}</p>
 
         </div>
     </div>

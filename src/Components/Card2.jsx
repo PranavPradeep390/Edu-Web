@@ -1,7 +1,6 @@
 import React from 'react';
 import user_dummy from '../Assets/user_dummy.jpg'
 
-
 const dummyData = [
   {
     id: 1,
@@ -10,27 +9,35 @@ const dummyData = [
     description: 'Principal',
     phone: 7736965145,
     qualification:'B.sc ,B.Ed',
-    experience :"25 years experience in india &abroad"
+    experience :"25 years experience in india & abroad"
   },
   {
     id: 2,
     imageUrl: user_dummy,
-    title: 'lorem ipsum',
+    title: 'Monisha Suresh',
     description: 'Teacher',
+    phone: 7994598832,
+    qualification:"B.A history, Montessori diploma course ",
+    experience :"1 year oxford kids kamaleshwaram, 1year Tagore kindergarten Medical College "
   },
   {
     id: 3,
     imageUrl:user_dummy,
-    title: 'lorem ipsum',
+    title: 'Saleema L',
     description: 'Teacher',
+    phone: 8714834800,
+    qualification:"BA public administration Montessori diploma course ",
+    experience :"4yeares caterpillar kindergarten.Anayara, 1 year Little Angels Anayara"
   },
   {
     id: 4,
     imageUrl: user_dummy,
-    title: 'lorem ipsum',
+    title: 'Nisa Naser',
     description: 'Teacher',
+    phone: 7994598832,
+    qualification:"BA English Montessori ppctcc",
+    experience :"11 year Al Ameen school.kollam, 1 year Green Dom Balaramapuram, 1 year Alif school kamaleshwaram, 1year Tagore kindergarten Medical College"
   },
-  // Add more dummy data as needed
 ];
 
 function Card() {
@@ -51,6 +58,13 @@ function Card() {
               {data.title}
             </h1>
             <p className="text-gray-700 mb-4 text-center">{data.description}</p>
+
+          <div className='hidden md:inline-block'>
+              <p className="text-gray-700 mb-4 text-center">{data.phone}</p>
+              <p className="text-gray-700 mb-4 text-center">Qualification: {data.qualification}</p>
+              <p className="text-gray-700 mb-4 text-center">Experience: {data.experience}</p>
+          </div>
+
           </div>
         </div>
       ))}

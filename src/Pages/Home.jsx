@@ -143,7 +143,7 @@ function Home() {
 
 
 
-      const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
       const fetchEvents = async () => {
@@ -289,7 +289,7 @@ function Home() {
 
       </div>
 
-      <div className='flex flex-wrap gap-14 justify-evenly'>
+      <div className='flex flex-wrap gap-14 justify-between md:justify-around'>
         
         <div className='flex items-center gap-3'>
          <div>
