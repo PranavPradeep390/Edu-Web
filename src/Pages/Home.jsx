@@ -235,8 +235,8 @@ function Home() {
     <div>
       <h1 className=' text-2xl md:text-4xl text-indigo-950 leading-snug mb-3 font-extrabold mt-8 md:mt-0 font-serif'>Explore <span className='text-blue-600'>Tagore Gardens</span> <br />
       Entertainment</h1>
-      <p className='w-[300px] md:w-[450px] text-justify leading-relaxed mb-3 font-light text-[#777a83]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui enim, pharetra at auctor vitae.</p>
-      <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white'><Link to={'/about'}>Read More</Link></button>
+      <p className='w-[300px] md:w-[450px] text-justify leading-relaxed mb-3 font-light text-[#3d3e41]'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children.</p>
+      <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white'><Link to={'/about'}>Know More</Link></button>
     </div>
   </div>
   <div className='w-full'><img src={design1} alt="" /></div>
@@ -251,7 +251,7 @@ function Home() {
       <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
         <img className='w-60' src={animals1} alt="animal1" />
         <h1 className='text-center font-bold text-3xl text-white mt-8  fontapply'>Playground</h1>
-        <p className='text-center font-semibold text-white mt-4 hidden md:inline-block'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block'>Helps children to develop motor skills, creativity, and social interaction.</p>
       </div>
  </div>
 
@@ -260,7 +260,7 @@ function Home() {
       <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
         <img className='w-52' src={animals2} alt="animal2" />
         <h1 className='text-center font-bold text-3xl text-white mt-6  fontapply'>Entertainment</h1>
-        <p className='text-center font-semibold text-white mt-4 hidden md:inline-block'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block'>Support social and cognitive development, making learning fun and enjoyable.</p>
       </div>
  </div>
 
@@ -269,7 +269,7 @@ function Home() {
       <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
         <img className='w-44' src={animals3} alt="animal3" />
         <h1 className='text-center font-bold text-3xl text-white mt-3  fontapply'>Enviroment</h1>
-        <p className='text-center font-semibold text-white mt-4 hidden md:inline-block'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block'>Environment is filled with bright colors and engaging activities.</p>
       </div> 
  </div>
 
@@ -285,7 +285,7 @@ function Home() {
 
         <h1 className=' text-center sm:text-left text-6xl mb-9 text-[#12265a] font-semibold font-serif'style={{fontSize:'33px'}}>Tagore Gardens Educational </h1>
 
-        <p className='text-[#777a83] text-center mb-16 md:w-[1000px] hidden md:inline-block md:20' style={{lineHeight:"1.7"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate quae, accusantium laboriosam nemo ratione quam libero,accusan accusantium laboriosam adipisicing elit. Molestiae cupiditate quae, nemo ratione quam libero, accusantium laboriosam</p>
+        <p className='text-[#777a83] text-center mb-16 md:w-[1000px] hidden md:inline-block md:20' style={{lineHeight:"1.7"}}>The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children and  guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
 
       </div>
 
@@ -297,7 +297,7 @@ function Home() {
         </div>
         <div>
             <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Art Classes</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Students explore various techniques to enhance their creativity and artistic skills.</p>
         </div>
         </div>
 
@@ -307,7 +307,7 @@ function Home() {
         </div>
         <div>
             <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Activity Rooms</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Versatile spaces designed for engaging and interactive experiences.</p>
         </div>
         </div>
 
@@ -317,7 +317,7 @@ function Home() {
         </div>
         <div>
             <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Education</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Education empowers individuals with knowledge and skills for personal and professional growth.</p>
         </div>
         </div>
 
@@ -327,7 +327,7 @@ function Home() {
         </div>
         <div>
             <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Languages</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Provide a means of communication and cultural understanding across diverse communities.</p>
         </div>
         </div>
 
@@ -338,7 +338,7 @@ function Home() {
         <div>
             <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>
             Birthday Party</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>A joyful celebration filled with fun, friends, and festivities.</p>
         </div>
         </div>
 
@@ -348,7 +348,7 @@ function Home() {
         </div>
         <div>
             <h1 className='text-base font-extrabold mb-2 text-[#12265a]'>Healthy Food</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Essential for maintaining overall well-being and vitality.</p>
         </div>
         </div>
         
@@ -467,7 +467,7 @@ function Home() {
        kindergarten gallery
         
       </h1>
-      <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>Expert teachers possess a deep understanding of their subject matter and pedagogy, allowing them to effectively communicate complex concepts to students. They are adept at identifying individual student needs and tailoring their teaching strategies accordingly.</p>
+      <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>We captured precious moments with personalized photo frames, and the students charmed everyone with their sweet performances. The teachers warmly treated the students with chocolates and gifts, creating a heartwarming and memorable start to the new school year.</p>
 
       <div className='w-full flex flex-wrap items-center justify-center gap-3 md:gap-16 px-2 md:px-20'>
 
@@ -514,7 +514,7 @@ function Home() {
         </div>
         <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Innovative Learning</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Fosters creativity and critical thinking approaches to education.</p>
         </div>
         </div>
 
@@ -524,7 +524,7 @@ function Home() {
         </div>
         <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Safe Enviroment</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Ensures peace of mind and promotes well-being for everyone involved.</p>
         </div>
         </div>
 
@@ -534,7 +534,7 @@ function Home() {
         </div>
         <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Experienced Educators</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Bring extensive knowledge and insight to  guide students' learning journeys.</p>
         </div>
         </div>
 
@@ -544,7 +544,7 @@ function Home() {
         </div>
         <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Cultural Diversity</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Enriches communities by bringing together different perspectives, and experiences.</p>
         </div>
         </div>
 
@@ -555,7 +555,7 @@ function Home() {
         <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>
             Interactive Learning</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7'>Engages childs through participation and understanding of knowledge.</p>
         </div>
         </div>
 
@@ -565,7 +565,7 @@ function Home() {
         </div>
         <div className='bg-white p-3 rounded-2xl'>
             <h1 className='text-2xl font-extrabold mb-2 text-[#12265a]'>Valued Education</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7'> Empowers individuals with knowledge and skills beneficial throughout their lives.</p>
         </div>
         </div>
         

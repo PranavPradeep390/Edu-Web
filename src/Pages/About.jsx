@@ -44,7 +44,7 @@ function About() {
 
     <div className='w-full'>
       <h1 className='text-center font-serif text-4xl font-semibold pt-10 mb-4'><span className=' text-[#12265a]'>Welcome to our</span> <span className='text-pink-600'>Kindergarten</span></h1>
-      <p className='mx-auto text-center text-[#777a83] mb-8 w-3/4'>Our set he for firmament morning sixth subdue today the darkness creeping gathered divide our let god moving today. Moving in fourth air night bring upon lesser subdue fowl male signs.</p>
+      <p className='mx-auto text-justify text-[#2a2a2b] mb-8 w-3/4 leading-7'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children. At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. The experienced educators at Tagore Kindergarten are committed to nurturing these young minds, guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
     </div>
 
     <div className='flex flex-wrap items-center justify-center gap-7 md:gap-20'>
@@ -56,7 +56,7 @@ function About() {
           <div>
             <h1 className='text-2xl text-blue-300 font-bold mb-1'>
             Safe Enviroment</h1>
-            <p className='text-[#0b162e] w-80 font-light leading-7'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <p className='text-[#0b162e] w-80 font-light leading-7'>Ensures peace of mind and promotes well-being for everyone involved. </p>
           </div>
         </div> 
 
@@ -65,7 +65,7 @@ function About() {
           <div className='w-16 h-16 rounded-full bg-yellow-300 relative'><SchoolIcon className='absolute top-2 left-2 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
             <h1 className='text-2xl text-yellow-300 font-bold mb-1'>Interactive Learning</h1>
-            <p className='text-[#0b162e] w-80 font-light leading-7'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <p className='text-[#0b162e] w-80 font-light leading-7'>Engages childs through participation and understanding of knowledge. </p>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ function About() {
           <div className='w-16 h-16 rounded-full bg-pink-300 relative'><PersonIcon className='absolute top-2 left-2.5 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
             <h1 className='text-2xl text-pink-300 font-bold mb-1'>Experienced Educators</h1>
-            <p className='text-[#0b162e] w-80 font-light leading-7'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <p className='text-[#0b162e] w-80 font-light leading-7'>Bring extensive knowledge and insight to guide students' learning journeys.</p>
           </div>
         </div>
 
@@ -202,9 +202,8 @@ function About() {
   
        <div className='md:w-1/2 p-5 text-center col  border-l-4  border-b-4 border-red-500 pb-8 py-10 border-dashed rounded-3xl bg-slate-100' >
          <h1 className=' text-center sm:text-left text-3xl pb-5   text-[#12265a] font-semibold font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
-         <p className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-         <br /><br />
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         <p className='text-justify leading-7'> At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. we adopts a hybrid curriculum, blending Montessori techniques with modern educational methods to promote holistic child development. Each child is seen as a budding star with immense potential for learning and action.<br /><br/>
+        The skilled educators at Tagore Kindergarten are dedicated to nurturing these young minds, preparing them to be conscientious and capable citizens of the future.
          </p>
        </div>
 </div>

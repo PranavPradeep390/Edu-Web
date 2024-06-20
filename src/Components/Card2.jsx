@@ -1,5 +1,6 @@
 import React from 'react';
 import user_dummy from '../Assets/user_dummy.jpg'
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const dummyData = [
   {
@@ -9,7 +10,7 @@ const dummyData = [
     description: 'Principal',
     phone: 7736965145,
     qualification:'B.sc ,B.Ed',
-    experience :"25 years experience in india & abroad"
+    experience :"25 years experience in India & Abroad"
   },
   {
     id: 2,
@@ -53,18 +54,18 @@ function Card() {
               alt={data.title}
             />
           </div>
-          <div className="p-6">
+          <div className="p-2">
             <h1 className="text-xl text-center font-semibold text-[#12265a] mb-1">
-              {data.title}
+              {data.title} 
             </h1>
-            <p className="text-gray-700 mb-4 text-center">{data.description}</p>
+            <p className="text-gray-800 mb-4 text-center">{data.description}</p>
 
-          <div className='hidden md:inline-block'>
-              <p className="text-gray-700 mb-4 text-center">{data.phone}</p>
-              <p className="text-gray-700 mb-4 text-center">Qualification: {data.qualification}</p>
-              <p className="text-gray-700 mb-4 text-center">Experience: {data.experience}</p>
+          <div className='hidden md:inline-block h-[120px]'>
+              <p className="text-[#12265a] mb-4 text-center"><LocalPhoneIcon/> {data.phone}</p>
+              <p className="text-gray-700 mb-4 ms-5 "><span  className='text-[#12265a]'>Qualification : </span>{data.qualification}</p>
           </div>
-
+                <p className="text-gray-700 mb-4 ms-5 hidden md:inline-block">
+                <span className='text-[#12265a]' >Experience : </span>{data.experience}</p>
           </div>
         </div>
       ))}
