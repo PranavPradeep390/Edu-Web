@@ -467,7 +467,7 @@ function Home() {
        kindergarten gallery
         
       </h1>
-      <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>We captured precious moments with personalized photo frames, and the students charmed everyone with their sweet performances. The teachers warmly treated the students with chocolates and gifts, creating a heartwarming and memorable start to the new school year.</p>
+      <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>The kindergarten gallery is a vibrant, engaging space where young children can display their creative work. It showcases a variety of artwork, including colorful drawings, imaginative paintings, and handcrafted projects.</p>
 
       <div className='w-full flex flex-wrap items-center justify-center gap-3 md:gap-16 px-2 md:px-20'>
 
