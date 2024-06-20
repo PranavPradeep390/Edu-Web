@@ -97,7 +97,7 @@ const [data, setData] = useState([]);
 
 <div className='mt-9 px-6 ' style={{backgroundImage:`url(${shape_bg})`}}>
 
-  <h1 className='text-center capitalize text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
+  <h1 className='text-center capitalize text-2xl md:text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
     <Swiper
       modules={[Autoplay]}
       spaceBetween={37}

@@ -45,7 +45,7 @@ function Header() {
 
       <nav className='p-5 bg-white shadow-xl md:flex md:items-center md:justify-between sticky top-0 z-10 w-full '>
         <div className='flex justify-between items-center'>
-          <img className='h-14 md:h-20  inline' src={Tagorelogo} alt="Na" />
+          <img className='h-14 md:h-16  inline' src={Tagorelogo} alt="Na" />
           <p className=' md:text-2xl md:visible font-semibold md:ms-3 ms-[-70px]' >Tagore Kindergarten</p>
           <span className='text-3xl cursor-pointer md:hidden block'>
             <button onClick={handleMenuToggle}>

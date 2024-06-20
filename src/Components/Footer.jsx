@@ -36,9 +36,8 @@ function Footer() {
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
                 <ul className='lg:ps-9 text-[#444547]'>
                   <li className='text-[#12265a] font-serif '><b>All Programs</b></li>
+                  <li>Kindergarten</li>
                   <li>Preschool</li>
-                  <li>Kindergarden</li>
-                  <li>Middle School</li>
                   <li>Kids Activity Club</li>
                   <li>Summer Camp</li>
                 </ul>
@@ -77,7 +76,7 @@ function Footer() {
                       <FacebookIcon style={{fontSize:"26px"}} className='ms-2 hover:text-slate-500'/>
                       </a>
                       <WhatsAppIcon style={{fontSize:"26px"}} className='ms-2 me-2 hover:text-slate-500'/>
-                     <a href="https://www.instagram.com/tagorekinder?igsh=Znc1Nm85NDZ1Y3d4"> <InstagramIcon style={{fontSize:"26px"}} className='me-2 hover:text-slate-500'/></a>
+                     <a href="https://www.instagram.com/tagorekinder?igsh=Znc1Nm85NDZ1Y3d4" target="_blank"> <InstagramIcon style={{fontSize:"26px"}} className='me-2 hover:text-slate-500'/></a>
                       <YouTubeIcon style={{fontSize:"26px"}} className='hover:text-slate-500'/>
           </div>
       

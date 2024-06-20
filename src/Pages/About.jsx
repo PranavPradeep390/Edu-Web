@@ -43,7 +43,7 @@ function About() {
   <div className='w-full bg-[#f2f6ff]'>
 
     <div className='w-full'>
-      <h1 className='text-center font-serif text-4xl font-semibold pt-10 mb-4'><span className=' text-[#12265a]'>Welcome to our</span> <span className='text-pink-600'>Kindergarten</span></h1>
+      <h1 className='text-center font-serif text-2xl md:text-4xl font-semibold pt-10 mb-4'><span className=' text-[#12265a]'>Welcome to our</span> <span className='text-pink-600'>Kindergarten</span></h1>
       <p className='mx-auto text-justify text-[#2a2a2b] mb-8 w-3/4 leading-7'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children. At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. The experienced educators at Tagore Kindergarten are committed to nurturing these young minds, guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
     </div>
 
@@ -74,7 +74,7 @@ function About() {
           <div className='w-16 h-16 rounded-full bg-pink-300 relative'><PersonIcon className='absolute top-2 left-2.5 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
             <h1 className='text-2xl text-pink-300 font-bold mb-1'>Experienced Educators</h1>
-            <p className='text-[#0b162e] w-80 font-light leading-7'>Bring extensive knowledge and insight to guide students' learning journeys.</p>
+            <p className='text-[#0b162e] w-72 font-light leading-7'>Bring extensive knowledge and insight to guide students' learning journeys.</p>
           </div>
         </div>
 
@@ -114,11 +114,11 @@ function About() {
         
         <div className='w-full sm:w-1/2 md:w-1/4 p-2 m-2 md:m-0'>
           <div className='mx-auto rounded-full  relative flex items-center justify-center' style={{backgroundColor:"lightskyblue",height:"150px",width:"150px"}}>
-            <CircularProgress duration={4} variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'}} className='rounded-full shadow-2xl'/>
+            <CircularProgress variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'}} className='rounded-full shadow-2xl'/>
             <div className='absolute flex flex-col items-center'>
               <MilitaryTechIcon style={{color:"white"}}/>
               <p className='text-5xl'>
-                {inView && <CountUp className='fontapply font-semibold ' end={20} duration={4} />}
+                {inView && <CountUp className='fontapply font-semibold ' end={4} duration={4} />}
               </p>
               <p className='font-light' style={{fontSize:"12px"}}>Years of <br />Excellence</p>
             </div>
@@ -131,7 +131,7 @@ function About() {
             <div className='absolute flex flex-col items-center'>
               <SchoolIcon style={{color:"white"}}/>
               <p className='text-5xl'>
-              {inView && <CountUp className='fontapply font-semibold' end={50} duration={4} />}
+              {inView && <CountUp className='fontapply font-semibold' end={3} duration={4} />}
               </p>
               <p className='font-light' style={{fontSize:"12px"}}>Qualified <br /> Teachers </p>
             </div>
@@ -143,8 +143,8 @@ function About() {
             <CircularProgress variant="determinate" value={inView ? 100 : 0} size={170} thickness={3} style={{ position: 'absolute', color: 'lavender'}}  className='rounded-full shadow-2xl'/>
             <div className='absolute flex flex-col items-center'>
               <PersonIcon style={{color:"white"}}/>
-              <p className='text-5xl'>
-              {inView && <CountUp className='fontapply font-semibold' end={500} duration={4} />}
+              <p className='text-5xl fontapply font-semibold'>
+              {inView && <CountUp end={100} duration={4} />}+
               </p>
               <p className='font-light' style={{fontSize:"12px"}}>Students <br /> Enrolled</p>
             </div>
@@ -157,7 +157,7 @@ function About() {
             <div className='absolute flex flex-col items-center'>
               <EmojiEventsIcon style={{color:"white"}}/>
               <p className='text-5xl'>
-              {inView && <CountUp className='fontapply font-semibold' end={15} duration={4} />}
+              {inView && <CountUp className='fontapply font-semibold' end={6} duration={4} />}
               </p>
               <p className='font-light' style={{fontSize:"12px"}}>Total <br /> Award</p>
             </div>
@@ -201,7 +201,7 @@ function About() {
        </div>
   
        <div className='md:w-1/2 p-5 text-center col  border-l-4  border-b-4 border-red-500 pb-8 py-10 border-dashed rounded-3xl bg-slate-100' >
-         <h1 className=' text-center sm:text-left text-3xl pb-5   text-[#12265a] font-semibold font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
+         <h1 className=' text-center sm:text-left text-xl md:text-3xl pb-5   text-[#12265a] font-semibold font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
          <p className='text-justify leading-7'> At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. we adopts a hybrid curriculum, blending Montessori techniques with modern educational methods to promote holistic child development. Each child is seen as a budding star with immense potential for learning and action.<br /><br/>
         The skilled educators at Tagore Kindergarten are dedicated to nurturing these young minds, preparing them to be conscientious and capable citizens of the future.
          </p>
