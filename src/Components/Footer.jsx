@@ -61,7 +61,7 @@ function Footer() {
                 </ul>
               </div>
         </div>
-        <div className='mt-[-40px] md:mt-[-180px]'>
+        <div className='mt-[-40px] md:mt-[-160px]'>
           <img src={footer1} alt="" srcset="" />
         </div>
         

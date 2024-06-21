@@ -14,6 +14,7 @@ import design1 from '../Assets/design1.png'
 import girl_drawing from '../Assets/girl_drawing.jpg'
 import RatingSwiper from '../Components/RatingSwiper';
 import ExpertTeachers from '../Components/ExpertTeachers';
+import PlaceIcon from '@mui/icons-material/Place';
 
 
 function About() {
@@ -52,7 +53,7 @@ function About() {
 
         <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
           
-          <div className='w-16 h-16 rounded-full bg-blue-300 relative'><EmojiEventsIcon className='absolute top-2 left-2 ' style={{color:"white",fontSize:"45px"}}/></div>
+          <div className='w-16 h-16 rounded-full bg-blue-300 relative'><PlaceIcon className='absolute top-2 left-2.5 ' style={{color:"white",fontSize:"45px"}}/></div>
           <div>
             <h1 className='text-2xl text-blue-300 font-bold mb-1'>
             Safe Enviroment</h1>

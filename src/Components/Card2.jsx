@@ -35,7 +35,7 @@ const dummyData = [
     imageUrl: user_dummy,
     title: 'Nisa Naser',
     description: 'Teacher',
-    phone: 7994598832,
+    phone: 9847554742,
     qualification:"BA English Montessori ppctcc",
     experience :"11 year Al Ameen school.kollam, 1 year Green Dom Balaramapuram, 1 year Alif school kamaleshwaram, 1year Tagore kindergarten Medical College"
   },
