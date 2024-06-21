@@ -208,7 +208,7 @@ const [currentPage, setCurrentPage] = useState(1);
                 {currentItems.map((event, index) => (
                     <div className='w-[330px] h-[385px] md:w-[400px] md:h-[400px] border-8 border-white-900 rounded-xl' key={index}>
 
-                        <img className='w-full h-1/2 rounded-t-xl' src={event.file} alt={event.title} />
+                        <img className='w-full h-1/2 rounded-t-xl' src={`https://admin.tagorekindergarten.com/uploads/forms/${event.file}`} alt={event.title} />
 
                         <div className='p-4'>
                             <p className='font-bold text-lg capitalize mb-4'>{event.title}</p>

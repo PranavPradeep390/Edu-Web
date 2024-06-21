@@ -16,7 +16,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import animals1 from '../Assets/animals1.png'
 import animals2 from '../Assets/animals2.png'
 import animals3 from '../Assets/animals3.png'
-import home_about_child from '../Assets/home_about_child.jpg'
+import home_about_pic from '../Assets/home_about_pic.jpeg'
 import home_main from '../Assets/home_main.png'
 import design1 from '../Assets/design1.png'
 import elephant1 from '../Assets/elephant1.png'
@@ -226,7 +226,7 @@ function Home() {
   <div className='w-full flex flex-wrap items-center justify-center bg-[#fafcff] p-10 md:gap-16'>
     <div className='border-2 border-dashed border-green-600 rounded-3xl '>
       <div>
-        <img className='w-[360px] h-[230px] md:w-[500px] md:h-[380px] rounded-3xl relative top-5 left-5' src={home_about_child} alt="" srcset="" />
+        <img className='w-[360px] h-[230px] md:w-[500px] md:h-[380px] rounded-3xl relative top-5 left-5' src={home_about_pic} alt="" srcset="" />
       </div>
 
 
@@ -478,7 +478,7 @@ function Home() {
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <img 
-              src={image.name} 
+              src={`https://admin.tagorekindergarten.com/uploads/gallary/${image.name}`}
               alt={image.id} 
               className='h-[100px] w-[150px] md:h-[220px] md:w-[250px] rounded-lg shadow-lg' 
             />

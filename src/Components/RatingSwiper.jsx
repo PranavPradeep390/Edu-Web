@@ -124,7 +124,7 @@ const [data, setData] = useState([]);
       {data.map((data, index) => (
         <SwiperSlide key={index}>
           <Rating
-            image={data.image}
+            image={`https://admin.tagorekindergarten.com/uploads/testmonial/${data.image}`}
             name={data.name}
             designation={data.designation}
             description={data.description}

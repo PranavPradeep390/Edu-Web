@@ -1,11 +1,11 @@
 import React from 'react';
-import user_dummy from '../Assets/user_dummy.jpg'
+import userdummy from '../Assets/userdummy.webp'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const dummyData = [
   {
     id: 1,
-    imageUrl:user_dummy,
+    imageUrl:userdummy,
     title: 'Bushra B.A.',
     description: 'Principal',
     phone: 7736965145,
@@ -14,7 +14,7 @@ const dummyData = [
   },
   {
     id: 2,
-    imageUrl: user_dummy,
+    imageUrl: userdummy,
     title: 'Monisha Suresh',
     description: 'Teacher',
     phone: 7994598832,
@@ -23,7 +23,7 @@ const dummyData = [
   },
   {
     id: 3,
-    imageUrl:user_dummy,
+    imageUrl:userdummy,
     title: 'Saleema L',
     description: 'Teacher',
     phone: 8714834800,
@@ -32,7 +32,7 @@ const dummyData = [
   },
   {
     id: 4,
-    imageUrl: user_dummy,
+    imageUrl: userdummy,
     title: 'Nisa Naser',
     description: 'Teacher',
     phone: 9847554742,

@@ -278,7 +278,7 @@ const [currentPage, setCurrentPage] = useState(1);
                 {currentItems.map((event, index) => (
                     <div className='w-[300px] h-[345px] md:w-[300px] md:h-[300px] hover:border-dashed hover:border-slate-300 border-8 border-white-900 rounded-xl' key={index}>
 
-                        <img className='w-full h-full rounded' src={event.imageUrl} alt={event.id} />
+    <img className='w-full h-full rounded' src={`https://admin.tagorekindergarten.com/uploads/gallary/${event.name}`} alt={event.id} />
 
                     </div>
                 ))}

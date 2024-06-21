@@ -9,13 +9,16 @@ import { CircularProgress } from '@mui/material';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import sections_bg from '../Assets/sections_bg.png'
-import school_bus from '../Assets/school_bus.png'
+import school_front from '../Assets/school_front.jpeg'
 import design1 from '../Assets/design1.png'
 import girl_drawing from '../Assets/girl_drawing.jpg'
 import RatingSwiper from '../Components/RatingSwiper';
 import ExpertTeachers from '../Components/ExpertTeachers';
 import PlaceIcon from '@mui/icons-material/Place';
-
+import summercamp from '../Assets/summercamp.jpg'
+import kidsactivity from '../Assets/kidsactivity.jpeg'
+import preschool from '../Assets/preschool.jpeg'
+import kidergarten from '../Assets/kindergarten.jpeg'
 
 function About() {
 
@@ -81,7 +84,7 @@ function About() {
 
       </div>
       <div>
-        <img className='w-[400px]' src={school_bus} alt="" srcset="" />
+        <img className='w-[400px] rounded-lg shadow-2xl' src={school_front} alt="" srcset="" />
       </div>
     </div>
     <svg
@@ -192,6 +195,8 @@ function About() {
       />
     </svg>
 
+    
+
 <div className='flex flex-wrap w-full  items-center px-4 mb-6 md:mt-0 md:px-16 bg-' >
        <div className="md:w-1/2 ">
           <img 
@@ -212,6 +217,42 @@ function About() {
 
      
  </div>
+
+ {/* class provided */}
+
+<div>
+  <h1 className='text-[#12265a] text-2xl md:text-4xl font-serif text-center mt-5 font-semibold'>Explore Our Ongoing Classess</h1>
+   <div className='flex flex-wrap items-center justify-evenly gap-5 py-10 px-7'>
+     <div className='w-full md:w-[300px]'>
+     <img className='w-full h-[200px] rounded' src={kidergarten} alt="" />
+      <div>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Kindergarten</h1>
+        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>Kindergarten is an early educational program for 4 to 6-year-olds, focusing on basic skills and social interaction through play and structured activities.</p>
+      </div>
+     </div>
+     <div className='w-full md:w-[300px]'>
+     <img className='w-full h-[200px] rounded' src={preschool} alt="" />
+      <div>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Preschool</h1>
+        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>Preschool is an educational setting for children aged 3 to 5 years.preparing children for kindergarten through play-based learning and activities.</p>
+      </div>
+     </div> 
+     <div className='w-full md:w-[300px]'>
+     <img className='w-full h-[200px] rounded' src={kidsactivity} alt="" />
+      <div>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Kids Activity Club</h1>
+        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>A kids activity club offers a range of fun and engaging activities for children, promoting physical, social, creative development, arts and crafts, sports.</p>
+      </div>
+     </div>    
+     <div className='w-full md:w-[300px]'>
+     <img className='w-full h-[200px] rounded' src={summercamp} alt="" />
+      <div>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Summer Camp</h1>
+        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>A supervised program for childrens conducted during the summer. It offers a variety of activities such as sports, arts and crafts, music, nature and exploration.</p>
+      </div>
+     </div> 
+   </div>
+</div>
 
  {/* exprt teachers */}
 <ExpertTeachers/>
