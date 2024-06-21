@@ -167,7 +167,7 @@ const Readmore = () => {
         <div className="md:w-1/2 w-full">
           <img
             className="object-cover w-full h-full"
-            src={card.file}
+            src={`https://admin.tagorekindergarten.com/uploads/forms/${card.file}`}
             alt={card.title}
           />
         </div>
