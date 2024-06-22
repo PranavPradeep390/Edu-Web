@@ -55,16 +55,16 @@ function Card() {
             />
           </div>
           <div className="p-2">
-            <h1 className="text-xl text-center font-semibold text-[#12265a] mb-1">
+            <h1 className="text-xl text-center font-semibold text-[#12265a] mb-1 font_fredoka">
               {data.title} 
             </h1>
-            <p className="text-gray-800 mb-4 text-center">{data.description}</p>
+            <p className="text-gray-800 mb-4 text-center font_fredoka">{data.description}</p>
 
           <div className='hidden md:inline-block h-[120px]'>
-              <p className="text-[#12265a] mb-4 text-center"><LocalPhoneIcon/> {data.phone}</p>
-              <p className="text-gray-700 mb-4 ms-5 "><span  className='text-[#12265a]'>Qualification : </span>{data.qualification}</p>
+              <p className="font_fredoka text-[#12265a] mb-4 text-center"><LocalPhoneIcon/> {data.phone}</p>
+              <p className="font_fredoka text-gray-700 mb-4 ms-5 "><span  className='text-[#12265a]'>Qualification : </span>{data.qualification}</p>
           </div>
-                <p className="text-gray-700 mb-4 ms-5 hidden md:inline-block">
+                <p className="font_fredoka text-gray-700 mb-4 ms-5 hidden md:inline-block">
                 <span className='text-[#12265a]' >Experience : </span>{data.experience}</p>
           </div>
         </div>

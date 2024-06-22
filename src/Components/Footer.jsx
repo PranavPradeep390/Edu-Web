@@ -68,7 +68,7 @@ function Footer() {
       <div className='w-full bg-sky-800 h-24 flex flex-wrap items-center justify-around text-white font-semibold relative'>
 
           <div>
-            <p> © 2024 A2Zalphabetsolutionz - All Rights Reserved.</p>
+            <p className='text-'> © 2024 A2Zalphabetsolutionz - All Rights Reserved.</p>
           </div>
 
           <div className='w-full sm:w-[150px] text-center text-white'>

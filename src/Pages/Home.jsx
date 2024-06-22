@@ -197,20 +197,20 @@ function Home() {
 
     <div className='text-center p-3 mt-20 sm:w-[600px] sm:text-left sm:ps-24'>
         <p className='text-xl'>
-          <span className='text-green-500 font-semibold'>PLAY. </span>
-          <span className='text-blue-500 font-semibold'>LEARN</span>
-          <span className='text-green-500 font-semibold'>. GROW</span>
+          <span className='text-green-500 font-semibold font_fredoka'>PLAY. </span>
+          <span className='text-blue-500 font-semibold font_fredoka'>LEARN</span>
+          <span className='text-green-500 font-semibold font_fredoka'>. GROW</span>
         </p>
-        <h2 className='text-5xl capitalize font-bold text-blue-500'>Tagore kindergarten
+        <h2 className='text-5xl capitalize font-bold text-blue-500 font_fredoka'>Tagore kindergarten
         </h2>
-        <p className='text-center mt-2  sm:text-left font-light text-[#1d1d1d] text-xl'>Where every day is an adventure in learning
+        <p className='text-center mt-2  sm:text-left font-light text-[#1d1d1d] text-xl font_fredoka'>Where every day is an adventure in learning
         </p>
        <div className='flex items-center justify-center gap-5 mt-7 sm:justify-start'>
             <div>
-                <button className='p-2 w-28 bg-white rounded-3xl shadow-xl text-blue-500 font-semibold'><Link to={'/contact'}>Contact Us</Link></button>
+                <button className='p-2 w-28 bg-white rounded-3xl shadow-xl text-blue-500 font-semibold font_fredoka'><Link to={'/contact'}>Contact Us</Link></button>
             </div>
             <div>
-                <button className='p-2 w-28  bg-blue-500 shadow-xl text-white rounded-3xl font-semibold'><Link to={'/about'}>About</Link></button >
+                <button className='p-2 w-28  bg-blue-500 shadow-xl text-white rounded-3xl font-semibold font_fredoka'><Link to={'/about'}>About</Link></button >
             </div>
        </div>
     </div>
@@ -233,10 +233,10 @@ function Home() {
     </div>
 
     <div>
-      <h1 className=' text-2xl md:text-4xl text-indigo-950 leading-snug mb-3 font-extrabold mt-8 md:mt-0 font-serif'>Explore <span className='text-blue-600'>Tagore Gardens</span> <br />
+      <h1 className=' text-2xl md:text-4xl text-indigo-950 leading-snug mb-3 font-extrabold mt-8 md:mt-0 font_fredoka'>Explore <span className='text-blue-600'>Tagore Gardens</span> <br />
       Entertainment</h1>
-      <p className='w-[300px] md:w-[450px] text-justify leading-relaxed mb-3 font-light text-[#3d3e41]'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children.</p>
-      <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white'><Link to={'/about'}>Know More</Link></button>
+      <p className='w-[300px] md:w-[450px] text-justify leading-relaxed mb-3 font-light text-[#3d3e41] font_fredoka'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children.</p>
+      <button className='px-4 py-2 bg-yellow-400 text-white font-extrabold rounded-full hover:bg-blue-400 border-4 border-dotted border-white font_fredoka'><Link to={'/about'}>Know More</Link></button>
     </div>
   </div>
   <div className='w-full'><img src={design1} alt="" /></div>
@@ -250,8 +250,8 @@ function Home() {
 
       <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
         <img className='w-60 ms-1' src={animals1} alt="animal1" />
-        <h1 className='text-center font-bold text-2xl md:text-3xl text-white mt-8  fontapply'>Playground</h1>
-        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block'>Helps children to develop motor skills, creativity, and social interaction.</p>
+        <h1 className='text-center font-bold text-2xl md:text-3xl text-white mt-8  font_fredoka'>Playground</h1>
+        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block font_fredoka'>Helps children to develop motor skills, creativity, and social interaction.</p>
       </div>
  </div>
 
@@ -259,8 +259,8 @@ function Home() {
 
       <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
         <img className='w-52' src={animals2} alt="animal2" />
-        <h1 className='text-center font-bold text-2xl md:text-3xl text-white mt-6  fontapply'>Entertainment</h1>
-        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block'>Support social and cognitive development, making learning fun and enjoyable.</p>
+        <h1 className='text-center font-bold text-2xl md:text-3xl text-white mt-6  font_fredoka'>Entertainment</h1>
+        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block font_fredoka'>Support social and cognitive development, making learning fun and enjoyable.</p>
       </div>
  </div>
 
@@ -268,8 +268,8 @@ function Home() {
 
       <div className=' w-[230px] h-[245px] md:w-[250px] md:h-[305px] rounded-3xl p-4 border-2 border-white hover:border-4 border-dashed'>
         <img className='w-44 ms-2' src={animals3} alt="animal3" />
-        <h1 className='text-center font-bold text-2xl md:text-3xl text-white mt-3  fontapply'>Enviroment</h1>
-        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block'>Environment is filled with bright colors and engaging activities.</p>
+        <h1 className='text-center font-bold text-2xl md:text-3xl text-white mt-3  font_fredoka'>Enviroment</h1>
+        <p className='text-center font-semibold text-white mt-3 hidden md:inline-block font_fredoka'>Environment is filled with bright colors and engaging activities.</p>
       </div> 
  </div>
 
@@ -283,9 +283,9 @@ function Home() {
 
       <div className='flex flex-col justify-center items-center'>
 
-        <h1 className=' text-center sm:text-left text-2xl md:text-4xl mb-9 text-[#12265a] font-semibold font-serif'>Tagore Gardens Educational </h1>
+        <h1 className=' text-center sm:text-left text-2xl md:text-4xl mb-9 text-[#12265a] font-semibold font_fredoka'>Tagore Gardens Educational </h1>
 
-        <p className='text-[#777a83] text-center mb-16 md:w-[1000px] hidden md:inline-block md:20' style={{lineHeight:"1.7"}}>The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children and  guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
+        <p className='text-[#777a83] text-center mb-16 md:w-[1000px] hidden md:inline-block md:20 font_fredoka' style={{lineHeight:"1.7"}}>The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children and  guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
 
       </div>
 
@@ -296,8 +296,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
         <div>
-            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Art Classes</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Students explore various techniques to enhance their creativity and artistic skills.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a] font_fredoka'>Art Classes</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block font_fredoka'>Students explore various techniques to enhance creativity and artistic skills.</p>
         </div>
         </div>
 
@@ -306,8 +306,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant2} alt="" />
         </div>
         <div>
-            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Activity Rooms</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Versatile spaces designed for engaging and interactive experiences.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a] font_fredoka'>Activity Rooms</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block font_fredoka'>Versatile spaces designed for engaging and interactive experiences.</p>
         </div>
         </div>
 
@@ -316,8 +316,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant3} alt="" />
         </div>
         <div>
-            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Education</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Education empowers individuals with knowledge and skills for personal and professional growth.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a] font_fredoka'>Education</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block font_fredoka'>Education empowers childs with knowledge and skills for growth.</p>
         </div>
         </div>
 
@@ -326,8 +326,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant4} alt="" />
         </div>
         <div>
-            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>Languages</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Provide a means of communication and cultural understanding across diverse communities.</p>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a] font_fredoka'>Languages</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block font_fredoka'>Provide a means of communication and cultural understanding.</p>
         </div>
         </div>
 
@@ -336,9 +336,9 @@ function Home() {
            <img className='w-24 h-24' src={elephant5} alt="" />
         </div>
         <div>
-            <h1 className='text-base  font-extrabold mb-2 text-[#12265a]'>
+            <h1 className='text-base  font-extrabold mb-2 text-[#12265a] font_fredoka'>
             Birthday Party</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>A joyful celebration filled with fun, friends, and festivities.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block font_fredoka'>A joyful celebration filled with fun, friends, and festivities.</p>
         </div>
         </div>
 
@@ -347,8 +347,8 @@ function Home() {
            <img className='w-24 h-24' src={elephant6} alt="" />
         </div>
         <div>
-            <h1 className='text-base font-extrabold mb-2 text-[#12265a]'>Healthy Food</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block'>Essential for maintaining overall well-being and vitality.</p>
+            <h1 className='text-base font-extrabold mb-2 text-[#12265a] font_fredoka'>Healthy Food</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 hidden md:inline-block font_fredoka'>Essential for maintaining overall well-being and vitality.</p>
         </div>
         </div>
         
@@ -463,11 +463,11 @@ function Home() {
         d="M0,40L12.6,48.3C25.3,57,51,73,76,71.7C101.1,70,126,50,152,50C176.8,50,202,70,227,76.7C252.6,83,278,77,303,75C328.4,73,354,77,379,76.7C404.2,77,429,73,455,70C480,67,505,63,531,63.3C555.8,63,581,67,606,70C631.6,73,657,77,682,78.3C707.4,80,733,80,758,71.7C783.2,63,808,47,834,40C858.9,33,884,37,909,40C934.7,43,960,47,985,40C1010.5,33,1036,17,1061,20C1086.3,23,1112,47,1137,60C1162.1,73,1187,77,1213,76.7C1237.9,77,1263,73,1288,70C1313.7,67,1339,63,1364,66.7C1389.5,70,1415,80,1440,70C1465.3,60,1491,30,1516,15C1541.1,0,1566,0,1592,6.7C1616.8,13,1642,27,1667,31.7C1692.6,37,1718,33,1743,26.7C1768.4,20,1794,10,1806,5L1818.9,0L1818.9,100L1806.3,100C1793.7,100,1768,100,1743,100C1717.9,100,1693,100,1667,100C1642.1,100,1617,100,1592,100C1566.3,100,1541,100,1516,100C1490.5,100,1465,100,1440,100C1414.7,100,1389,100,1364,100C1338.9,100,1314,100,1288,100C1263.2,100,1238,100,1213,100C1187.4,100,1162,100,1137,100C1111.6,100,1086,100,1061,100C1035.8,100,1011,100,985,100C960,100,935,100,909,100C884.2,100,859,100,834,100C808.4,100,783,100,758,100C732.6,100,707,100,682,100C656.8,100,632,100,606,100C581.1,100,556,100,531,100C505.3,100,480,100,455,100C429.5,100,404,100,379,100C353.7,100,328,100,303,100C277.9,100,253,100,227,100C202.1,100,177,100,152,100C126.3,100,101,100,76,100C50.5,100,25,100,13,100L0,100Z"
       />
     </svg>
-      <h1 className={`capitalize text-center text-2xl md:text-4xl font-serif font-semibold text-[#12265a]  py-5 ${isVisible ? 'animate-fade-in' : ''}`}>
+      <h1 className={`capitalize text-center text-2xl md:text-4xl font_fredoka font-semibold text-[#12265a]  py-5 ${isVisible ? 'animate-fade-in' : ''}`}>
        kindergarten gallery
         
       </h1>
-      <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block'>The kindergarten gallery is a vibrant, engaging space where young children can display their creative work. It showcases a variety of artwork, including colorful drawings, imaginative paintings, and handcrafted projects.</p>
+      <p className='className=" text-[#777a83] font-light  px-36 text-center mb-10 hidden lg:block font_fredoka'>The kindergarten gallery is a vibrant, engaging space where young children can display their creative work. It showcases a variety of artwork, including colorful drawings, imaginative paintings, and handcrafted projects.</p>
 
       <div className='w-full flex flex-wrap items-center justify-center gap-3 md:gap-16 px-2 md:px-20'>
 
@@ -486,7 +486,7 @@ function Home() {
         ))}
       </div>
 
-      <p className='text-center text-xl text-blue-700 m-5'>
+      <p className='text-center text-xl text-blue-700 m-5 font_fredoka'>
         <a href="/gallery">see more<ChevronRightIcon/></a>
       </p>
       <hr />
@@ -504,7 +504,7 @@ function Home() {
 {/* why choose us */}
   <div className='flex flex-wrap w-full row items-center bg-blue-200 py-10'>
 
-    <h1 className='mx-auto text-2xl md:text-4xl mb-11 font-serif text-[#12265a] font-semibold'>Why Choose Us ? </h1>
+    <h1 className='mx-auto text-2xl md:text-4xl mb-11 font-serif text-[#12265a] font-semibold font_fredoka'>Why Choose Us ? </h1>
     
      <div className='flex flex-wrap gap-14 justify-center'>
         
@@ -513,8 +513,8 @@ function Home() {
            <img className='w-24 h-24 hidden md:inline-block' src={elephant1} alt="" />
         </div>
         <div className='bg-white p-3 rounded-2xl'>
-            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a]'>Innovative Learning</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Fosters creativity and critical thinking approaches to education.</p>
+            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a] font_fredoka'>Innovative Learning</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 font_fredoka'>Fosters creativity and critical thinking approaches to education.</p>
         </div>
         </div>
 
@@ -523,8 +523,8 @@ function Home() {
            <img className='w-24 h-24 hidden md:inline-block' src={elephant2} alt="" />
         </div>
         <div className='bg-white p-3 rounded-2xl'>
-            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a]'>Safe Enviroment</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Ensures peace of mind and promotes well-being for everyone involved.</p>
+            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a] font_fredoka'>Safe Enviroment</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 font_fredoka'>Ensures peace of mind and promotes well-being for everyone involved.</p>
         </div>
         </div>
 
@@ -533,8 +533,8 @@ function Home() {
            <img className='w-24 h-24 hidden md:inline-block' src={elephant3} alt="" />
         </div>
         <div className='bg-white p-3 rounded-2xl'>
-            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a]'>Experienced Educators</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Bring extensive knowledge and insight to  guide students' learning journeys.</p>
+            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a] font_fredoka'>Experienced Educators</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 font_fredoka'>Bring extensive knowledge and insight to  guide students' learning journeys.</p>
         </div>
         </div>
 
@@ -543,8 +543,8 @@ function Home() {
            <img className='w-24 h-24 hidden md:inline-block' src={elephant4} alt="" />
         </div>
         <div className='bg-white p-3 rounded-2xl'>
-            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a]'>Cultural Diversity</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Enriches communities by bringing together different perspectives, and experiences.</p>
+            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a] font_fredoka'>Cultural Diversity</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 font_fredoka'>Enriches communities by bringing different perspectives, and experiences.</p>
         </div>
         </div>
 
@@ -553,9 +553,9 @@ function Home() {
            <img className='w-24 h-24 hidden md:inline-block' src={elephant5} alt="" />
         </div>
         <div className='bg-white p-3 rounded-2xl'>
-            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a]'>
+            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a] font_fredoka'>
             Interactive Learning</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'>Engages childs through participation and understanding of knowledge.</p>
+            <p className='w-72 text-[#777a83] font-light leading-7 font_fredoka'>Engages childs through participation and understanding of knowledge.</p>
         </div>
         </div>
 
@@ -564,8 +564,8 @@ function Home() {
            <img className='w-24 h-24 hidden md:inline-block' src={elephant6} alt="" />
         </div>
         <div className='bg-white p-3 rounded-2xl'>
-            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a]'>Valued Education</h1>
-            <p className='w-72 text-[#777a83] font-light leading-7'> Empowers individuals with knowledge and skills beneficial throughout their lives.</p>
+            <h1 className='text-xl md:text-2xl font-extrabold mb-2 text-[#12265a] font_fredoka'>Valued Education</h1>
+            <p className='w-72 text-[#777a83] font-light leading-7 font_fredoka'> Empowers individuals with knowledge, skills beneficial throughout their lives.</p>
         </div>
         </div>
         

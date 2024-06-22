@@ -7,74 +7,6 @@ import AxiosInstance from '../Api/AxiosInstance';
 
 
 function RatingSwiper() {
-
-    // const ratingData = [
-    //     { 
-    //       rating: 5, 
-    //       review: 'Great service!', 
-    //       user: 'User 1', 
-    //       location: 'Germany', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'The service exceeded my expectations. Highly professional and efficient.'
-    //     },
-    //     { 
-    //       rating: 4, 
-    //       review: 'Very satisfied!', 
-    //       user: 'User 2', 
-    //       location: 'USA', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'Good experience overall. Prompt service and friendly staff.'
-    //     },
-    //     { 
-    //       rating: 3, 
-    //       review: 'Good', 
-    //       user: 'User 3', 
-    //       location: 'UK', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'The service was decent, though there is room for improvement in some areas.'
-    //     },
-    //     { 
-    //       rating: 5, 
-    //       review: 'Excellent!', 
-    //       user: 'User 4', 
-    //       location: 'France', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'Absolutely outstanding service! I would definitely recommend it to others.'
-    //     },
-    //     { 
-    //       rating: 4, 
-    //       review: 'Very good!', 
-    //       user: 'User 5', 
-    //       location: 'Italy', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'Very happy with the service. The team was professional and courteous.'
-    //     },
-    //     { 
-    //       rating: 3, 
-    //       review: 'Satisfied.', 
-    //       user: 'User 6', 
-    //       location: 'Spain', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'An average experience. The service was satisfactory but not exceptional.'
-    //     },
-    //     { 
-    //       rating: 4, 
-    //       review: 'Very Good', 
-    //       user: 'User 7', 
-    //       location: 'Netherlands', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'Phenomenal service! I am extremely pleased and will use it again.'
-    //     },
-    //     { 
-    //       rating: 4, 
-    //       review: 'Good job!', 
-    //       user: 'User 8', 
-    //       location: 'Belgium', 
-    //       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-    //       description: 'Great job by the team. I am very satisfied with the outcome.'
-    //     },
-    //   ];
-
       
 const [data, setData] = useState([]);
 
@@ -97,7 +29,7 @@ const [data, setData] = useState([]);
 
 <div className='mt-9 px-6 ' style={{backgroundImage:`url(${shape_bg})`}}>
 
-  <h1 className='text-center capitalize text-2xl md:text-4xl text-[#12265a] font-semibold font-serif'>parents are saying</h1>
+  <h1 className='text-center capitalize text-2xl md:text-4xl text-[#12265a] font-semibold font_fredoka'>parents are saying</h1>
     <Swiper
       modules={[Autoplay]}
       spaceBetween={37}
