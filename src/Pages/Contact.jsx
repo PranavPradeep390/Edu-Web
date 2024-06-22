@@ -57,7 +57,7 @@ function Contact() {
 
 
 <div className='bg-slate-100'>
-  <h1 className='capitalize text-4xl text-[#12265a] font-serif font-semibold text-center pt-10'>contact our <span className='text-pink-600'>kindergart en</span></h1>
+  <h1 className='capitalize text-4xl text-[#12265a] font-serif font-semibold text-center pt-10'>contact our <span className='text-pink-600'>kindergarten</span></h1>
    
   <form className=' row flex flex-wrap items-center lg:px-15 px-10'>
   
