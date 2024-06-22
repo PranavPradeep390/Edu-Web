@@ -9,7 +9,7 @@ function Gallery() {
   return (
     <div className='overflow-x-hidden' style={{ backgroundImage:` url(${bg2})`}}>
 
-<div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+<div className='flex-col bg-[#e3867f]' style={{height:"300px",display:"flex",justifyContent:"center",alignItems:'center'}}>
  
  <h1 
   className='text-4xl md:text-6xl uppercase font-extrabold mb-2 md:mb-4 text-white ' style={{fontFamily:'cursive'}}>gallery
@@ -20,7 +20,7 @@ function Gallery() {
   </h1>
   </div>
 <div className='px-24 py-8'>
-  <h1 className='font-serif text-[#12265a] text-center text-2xl md:text-4xl capitalize mb-8' >explore kindergarten's gallery</h1>
+  <h1 className='font_fredoka text-[#12265a] text-center text-2xl md:text-4xl capitalize mb-8 ' >explore kindergarten's gallery</h1>
   <ImageGrid/>
   </div>
   </div>

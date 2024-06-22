@@ -4,169 +4,6 @@ import { Link } from 'react-router-dom';
 
 const itemsPerPage = 6;
 
-// const dummydata = [
-//     {
-//       id: 1,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 2,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Science Class',
-//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//       author: 'John Doe',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 3,
-//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 4,
-//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 5,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 6,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Science Class',
-//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//       author: 'John Doe',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 7,
-//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 8,
-//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 9,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 10,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Science Class',
-//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//       author: 'John Doe',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 11,
-//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 12,
-//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 13,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 14,
-//       imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Science Class',
-//       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//       author: 'John Doe',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 15,
-//       imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },
-//     {
-//       id: 16,
-//       imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//       title: 'Mathematics Class',
-//       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//       author: 'Mona George',
-//       authorImageUrl: 'https://picsum.photos/200/300',
-//     },{
-//         id: 17,
-//         imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//         title: 'Mathematics Class',
-//         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//         author: 'Mona George',
-//         authorImageUrl: 'https://picsum.photos/200/300',
-//       },
-//       {
-//         id: 18,
-//         imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//         title: 'Mathematics Class',
-//         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//         author: 'Mona George',
-//         authorImageUrl: 'https://picsum.photos/200/300',
-//       },
-//       {
-//         id: 19,
-//         imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//         title: 'Mathematics Class',
-//         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
-//         author: 'Mona George',
-//         authorImageUrl: 'https://picsum.photos/200/300',
-//       },
-//       {
-//         id: 20,
-//         imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-//         title: 'Science Class',
-//         description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//         author: 'John Doe',
-//         authorImageUrl: 'https://picsum.photos/200/300',
-//       }
-//     // Add more dummy data as needed
-//   ];
-
 function NewsEventsCard() {
 
     const [expanded, setExpanded] = useState({});
@@ -211,18 +48,18 @@ const [currentPage, setCurrentPage] = useState(1);
                         <img className='w-full h-1/2 rounded-t-xl' src={`https://admin.tagorekindergarten.com/uploads/forms/${event.file}`} alt={event.title} />
 
                         <div className='p-4'>
-                            <p className='font-bold text-lg capitalize mb-4'>{event.title}</p>
+                            <p className='font-bold text-lg capitalize mb-4 font_fredoka'>{event.title}</p>
 
-                            <p className="text-[#434445] mb-4">
+                            <p className="text-[#434445] mb-4 font_fredoka">
                             {expanded[index] ? event.description : `${event.description.slice(0, 100)}`}
                             {event.description.length > 100 && (
-                            <Link to={`/readmore/${event.id}`} className="text-blue-500 cursor-pointer">
+                            <Link to={`/readmore/${event.id}`} className="text-blue-500 cursor-pointer font_fredoka">
                                 &nbsp; Read more
                             </Link>
                             )}
                             </p>
 
-                            <p className='text-[#434445]'>Posted On : "{event.date}"</p>
+                            <p className='text-[#434445] font_fredoka'>Posted On : "{event.date}"</p>
                         </div>
 
                     </div>
@@ -231,10 +68,10 @@ const [currentPage, setCurrentPage] = useState(1);
 
 
             <div className='mt-4'>
-                <button onClick={handlePrevPage} disabled={currentPage === 1} className='px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50 mr-2'>
+                <button onClick={handlePrevPage} disabled={currentPage === 1} className='px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50 mr-2 font_fredoka'>
                     Previous
                 </button>
-                <button onClick={handleNextPage} disabled={currentPage === totalPages} className='px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50'>
+                <button onClick={handleNextPage} disabled={currentPage === totalPages} className='px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50 font_fredoka'>
                     Next
                 </button>
             </div>

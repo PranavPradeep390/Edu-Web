@@ -32,7 +32,7 @@ function About() {
   return (
     <div className='overflow-x-hidden'>
    {/* about us */}
- <div className='flex-col' style={{ backgroundImage:`url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+ <div className='flex-col bg-[#e3867f]' style={{height:"300px",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
     className='text-4xl md:text-6xl uppercase font-extrabold mb-2 md:mb-4 text-white ' style={{fontFamily:'cursive'}}>About Us
     </h1>
@@ -47,8 +47,8 @@ function About() {
   <div className='w-full bg-[#f2f6ff]'>
 
     <div className='w-full'>
-      <h1 className='text-center font-serif text-2xl md:text-4xl font-semibold pt-10 mb-4'><span className=' text-[#12265a]'>Welcome to our</span> <span className='text-pink-600'>Kindergarten</span></h1>
-      <p className='mx-auto text-justify text-[#2a2a2b] mb-8 w-3/4 leading-7'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children. At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. The experienced educators at Tagore Kindergarten are committed to nurturing these young minds, guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
+      <h1 className='text-center font-serif text-2xl md:text-4xl font-semibold pt-10 mb-4 font_fredoka'><span className=' text-[#12265a]'>Welcome to our</span> <span className='text-pink-600'>Kindergarten</span></h1>
+      <p className='mx-auto text-justify text-[#2a2a2b] mb-8 w-3/4 leading-7 font_fredoka'>Tagore Kindergarten is a pioneering educational institution dedicated to providing young learners with an exceptional learning experience through interactive, hands-on activities. The institution embraces a hybrid curriculum that combines Montessori methods with contemporary educational strategies, aiming to foster holistic development in children. At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. The experienced educators at Tagore Kindergarten are committed to nurturing these young minds, guiding them to become the conscientious and capable citizens of tomorrow's world.</p>
     </div>
 
     <div className='flex flex-wrap items-center justify-center gap-7 md:gap-20'>
@@ -56,29 +56,29 @@ function About() {
 
         <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
           
-          <div className='w-16 h-16 rounded-full bg-blue-300 relative'><PlaceIcon className='absolute top-2 left-2.5 ' style={{color:"white",fontSize:"45px"}}/></div>
+          <div className='w-12 h-12 rounded-full bg-blue-300 relative hidden md:inline-block'><PlaceIcon className='absolute top-1 left-1.5 ' style={{color:"white",fontSize:"35px"}}/></div>
           <div>
-            <h1 className='text-2xl text-blue-300 font-bold mb-1'>
+            <h1 className='text-2xl text-blue-300 font-bold mb-1 font_fredoka'>
             Safe Enviroment</h1>
-            <p className='text-[#0b162e] w-80 font-light leading-7'>Ensures peace of mind and promotes well-being for everyone involved. </p>
+            <p className='text-[#0b162e] w-80 font-light leading-7 font_fredoka'>Ensures peace of mind and promotes well being for everyone involved. </p>
           </div>
         </div> 
 
         <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
 
-          <div className='w-16 h-16 rounded-full bg-yellow-300 relative'><SchoolIcon className='absolute top-2 left-2 ' style={{color:"white",fontSize:"45px"}}/></div>
+          <div className='w-12 h-12 rounded-full bg-yellow-300 relative hidden md:inline-block'><SchoolIcon className='absolute top-1 left-1.5 ' style={{color:"white",fontSize:"35px"}}/></div>
           <div>
-            <h1 className='text-2xl text-yellow-300 font-bold mb-1'>Interactive Learning</h1>
-            <p className='text-[#0b162e] w-80 font-light leading-7'>Engages childs through participation and understanding of knowledge. </p>
+            <h1 className='text-2xl text-yellow-300 font-bold mb-1 font_fredoka'>Interactive Learning</h1>
+            <p className='text-[#0b162e] w-80 font-light leading-7 font_fredoka'>Engages childs through participation and understanding of knowledge. </p>
           </div>
         </div>
 
         <div className='flex items-center md:gap-5 gap-1 ms-3 md:ms-0 py-3'>
           
-          <div className='w-16 h-16 rounded-full bg-pink-300 relative'><PersonIcon className='absolute top-2 left-2.5 ' style={{color:"white",fontSize:"45px"}}/></div>
+          <div className='w-12 h-12 rounded-full bg-pink-300 relative hidden md:inline-block'><PersonIcon className='absolute top-1 left-1.5 ' style={{color:"white",fontSize:"35px"}}/></div>
           <div>
-            <h1 className='text-2xl text-pink-300 font-bold mb-1'>Experienced Educators</h1>
-            <p className='text-[#0b162e] w-72 font-light leading-7'>Bring extensive knowledge and insight to guide students' learning journeys.</p>
+            <h1 className='text-2xl text-pink-300 font-bold mb-1 font_fredoka'>Experienced Educators</h1>
+            <p className='text-[#0b162e] w-72 font-light leading-7 font_fredoka'>Bring extensive knowledge and insight to guide students' learning journeys.</p>
           </div>
         </div>
 
@@ -207,8 +207,8 @@ function About() {
        </div>
   
        <div className='md:w-1/2 p-5 text-center col  border-l-4  border-b-4 border-red-500 pb-8 py-10 border-dashed rounded-3xl bg-slate-100' >
-         <h1 className=' text-center sm:text-left text-xl md:text-3xl pb-5   text-[#12265a] font-semibold font-serif'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
-         <p className='text-justify leading-7'> At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. we adopts a hybrid curriculum, blending Montessori techniques with modern educational methods to promote holistic child development. Each child is seen as a budding star with immense potential for learning and action.<br /><br/>
+         <h1 className=' text-center sm:text-left text-xl md:text-3xl pb-5   text-[#12265a] font-semibold font_fredoka'>We Learn Smart Way To Build Bright Futute For Your Children</h1>
+         <p className='text-justify leading-7 font_fredoka'> At Tagore Kindergarten , every child is recognized as a budding star, brimming with potential for learning and action. we adopts a hybrid curriculum, blending Montessori techniques with modern educational methods to promote holistic child development. Each child is seen as a budding star with immense potential for learning and action.<br /><br/>
         The skilled educators at Tagore Kindergarten are dedicated to nurturing these young minds, preparing them to be conscientious and capable citizens of the future.
          </p>
        </div>
@@ -221,34 +221,34 @@ function About() {
  {/* class provided */}
 
 <div>
-  <h1 className='text-[#12265a] text-2xl md:text-4xl font-serif text-center mt-5 font-semibold'>Explore Our Ongoing Classess</h1>
+  <h1 className='text-[#12265a] text-2xl md:text-4xl font_fredoka text-center mt-5 font-semibold'>Explore Our Ongoing Classess</h1>
    <div className='flex flex-wrap items-center justify-evenly gap-5 py-10 px-7'>
      <div className='w-full md:w-[300px]'>
      <img className='w-full h-[200px] rounded' src={kidergarten} alt="" />
       <div>
-        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Kindergarten</h1>
-        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>Kindergarten is an early educational program for 4 to 6-year-olds, focusing on basic skills and social interaction through play and structured activities.</p>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font_fredoka'>Kindergarten</h1>
+        <p className='  text-center mb-2 text-[#464647] leading-6 font_fredoka'>Kindergarten is an early educational program for 4 to 6-year-olds, focusing on basic skills and social interaction through play and structured activities.</p>
       </div>
      </div>
      <div className='w-full md:w-[300px]'>
      <img className='w-full h-[200px] rounded' src={preschool} alt="" />
       <div>
-        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Preschool</h1>
-        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>Preschool is an educational setting for children aged 3 to 5 years.preparing children for kindergarten through play-based learning and activities.</p>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font_fredoka'>Preschool</h1>
+        <p className=' font_fredoka text-center mb-2 text-[#464647] leading-6'>Preschool is an educational setting for children aged 3 to 5 years.preparing children for kindergarten through play-based learning and activities.</p>
       </div>
      </div> 
      <div className='w-full md:w-[300px]'>
      <img className='w-full h-[200px] rounded' src={kidsactivity} alt="" />
       <div>
-        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Kids Activity Club</h1>
-        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>A kids activity club offers a range of fun and engaging activities for children, promoting physical, social, creative development, arts and crafts, sports.</p>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font_fredoka'>Kids Activity Club</h1>
+        <p className=' font_fredoka text-center mb-2 text-[#464647] leading-6'>A kids activity club offers a range of fun and engaging activities for children, promoting physical, social, creative development, arts and crafts, sports.</p>
       </div>
      </div>    
      <div className='w-full md:w-[300px]'>
      <img className='w-full h-[200px] rounded' src={summercamp} alt="" />
       <div>
-        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font-sans'>Summer Camp</h1>
-        <p className=' font-sans text-center mb-2 text-[#464647] leading-6'>A supervised program for childrens conducted during the summer. It offers a variety of activities such as sports, arts and crafts, music, nature and exploration.</p>
+        <h1 className='text-center text-2xl font-medium py-1 text-[#431f64] font_fredoka'>Summer Camp</h1>
+        <p className=' font_fredoka text-center mb-2 text-[#464647] leading-6'>A supervised program for childrens conducted during the summer. It offers a variety of activities such as sports, arts and crafts, music, nature and exploration.</p>
       </div>
      </div> 
    </div>

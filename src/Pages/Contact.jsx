@@ -44,7 +44,7 @@ function Contact() {
   
   return (
     <div className='overflow-x-hidden'>
-<div className='flex-col' style={{ backgroundImage:` url(${sections_bg})`,height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+<div className='flex-col bg-[#e3867f]' style={{height:"300px",display:"flex",justifyContent:"center",alignItems:'center'}}>
  
  <h1 
   className='text-4xl md:text-6xl uppercase font-extrabold mb-2 md:mb-4 text-white ' style={{fontFamily:'cursive'}}>contact
@@ -57,22 +57,22 @@ function Contact() {
 
 
 <div className='bg-slate-100'>
-  <h1 className='capitalize text-4xl text-[#12265a] font-serif font-semibold text-center pt-10'>contact our <span className='text-pink-600'>kindergarten</span></h1>
+  <h1 className='capitalize text-2xl md:text-4xl text-[#12265a] font_fredoka font-semibold text-center pt-10 '>contact our <span className='text-pink-600'>kindergarten</span></h1>
    
   <form className=' row flex flex-wrap items-center lg:px-15 px-10'>
   
       <div className='col-lg-3 lg:px-20 p-5'>
           <div className='pb-5 pt-5'>
-          <h1 className='text-2xl font-semibold text-[#12265a] '>Our Locations</h1>
-          <p>TGRA-38, Tagore Gardens, Kumarapuram,<br /> Medical College P.O., Thiruvananthapuram-695011</p>
+          <h1 className='text-2xl font-semibold text-[#12265a] font_fredoka'>Our Locations</h1>
+          <p className='font_fredoka'>TGRA-38, Tagore Gardens, Kumarapuram,<br /> Medical College P.O., Thiruvananthapuram-695011</p>
           </div>
           <div className='pb-5'>
-          <h1 className='text-2xl font-semibold  text-[#12265a] '>Phone Number</h1>
-          <p>7736965145 | 8086029291</p>
+          <h1 className='text-2xl font-semibold  text-[#12265a] font_fredoka'>Phone Number</h1>
+          <p className='font_fredoka'>7736965145 | 8086029291</p>
           </div>
           <div className='pb-5'>
-          <h1 className='text-2xl font-semibold  text-[#12265a] '>Email Address</h1>
-          <p>info@tagorekindergarten.com</p></div>
+          <h1 className='text-2xl font-semibold  text-[#12265a] font_fredoka'>Email Address</h1>
+          <p className='font_fredoka'>info@tagorekindergarten.com</p></div>
       </div>
 
       <div className='col-lg-9 lg:p-20 p-5'>
@@ -130,7 +130,7 @@ function Contact() {
           </div>
         )}
 
-         <button className='p-3 mt-5 m-1 rounded-xl ' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}
+         <button className='p-3 mt-5 m-1 rounded-xl font_fredoka' style={{backgroundColor:"purple",color:"white",fontSize:"15px"}}
          onClick={handleSubmit}><b>Send Message</b></button>
   
       </div>

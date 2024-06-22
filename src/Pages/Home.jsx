@@ -39,107 +39,6 @@ function Home() {
         threshold: .5,
       });
 
-      // const ratingData = [
-      //   { 
-      //     rating: 5, 
-      //     review: 'Great service!', 
-      //     user: 'User 1', 
-      //     location: 'Germany', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'The service exceeded my expectations. Highly professional and efficient.'
-      //   },
-      //   { 
-      //     rating: 4, 
-      //     review: 'Very satisfied!', 
-      //     user: 'User 2', 
-      //     location: 'USA', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'Good experience overall. Prompt service and friendly staff.'
-      //   },
-      //   { 
-      //     rating: 3, 
-      //     review: 'Good', 
-      //     user: 'User 3', 
-      //     location: 'UK', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'The service was decent, though there is room for improvement in some areas.'
-      //   },
-      //   { 
-      //     rating: 5, 
-      //     review: 'Excellent!', 
-      //     user: 'User 4', 
-      //     location: 'France', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'Absolutely outstanding service! I would definitely recommend it to others.'
-      //   },
-      //   { 
-      //     rating: 4, 
-      //     review: 'Very good!', 
-      //     user: 'User 5', 
-      //     location: 'Italy', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'Very happy with the service. The team was professional and courteous.'
-      //   },
-      //   { 
-      //     rating: 3, 
-      //     review: 'Satisfied.', 
-      //     user: 'User 6', 
-      //     location: 'Spain', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'An average experience. The service was satisfactory but not exceptional.'
-      //   },
-      //   { 
-      //     rating: 4, 
-      //     review: 'Very Good', 
-      //     user: 'User 7', 
-      //     location: 'Netherlands', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'Phenomenal service! I am extremely pleased and will use it again.'
-      //   },
-      //   { 
-      //     rating: 4, 
-      //     review: 'Good job!', 
-      //     user: 'User 8', 
-      //     location: 'Belgium', 
-      //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s',
-      //     description: 'Great job by the team. I am very satisfied with the outcome.'
-      //   },
-      // ];
-
-      // const images = [
-      //   {
-      //     src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 1"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 2"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 3"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 4"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 5"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 6"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 7"
-      //   },
-      //   {
-      //     src: "https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      //     alt: "Image 8"
-      //   }
-      // ];
 
 
 
@@ -201,7 +100,7 @@ function Home() {
           <span className='text-blue-500 font-semibold font_fredoka'>LEARN</span>
           <span className='text-green-500 font-semibold font_fredoka'>. GROW</span>
         </p>
-        <h2 className='text-5xl capitalize font-bold text-blue-500 font_fredoka'>Tagore kindergarten
+        <h2 className='text-5xl capitalize font-bold text-blue-500 font_fredoka'>Tagore kindergarten and daycare
         </h2>
         <p className='text-center mt-2  sm:text-left font-light text-[#1d1d1d] text-xl font_fredoka'>Where every day is an adventure in learning
         </p>

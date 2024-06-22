@@ -1,5 +1,4 @@
 import React from 'react'
-// import Button from 'react-bootstrap/Button';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -10,11 +9,10 @@ import footer1 from '../Assets/footer1.png'
 
 function Footer() {
 
-    // Function to scroll to the top of the page
     const scrollToTop = () => {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Smooth scrolling behavior
+        behavior: 'smooth' 
       });
     };
   return (
@@ -26,25 +24,25 @@ function Footer() {
           
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto ' style={{lineHeight:"1.7rem"}}>
                 <div>
-                  <p className='capitalize text-2xl font-semibold text-[#12265a] font-serif'>Tagore kindergarten </p>
-                  <p className='text-justify mt-2 text-base font-medium text-[#12265a] font-serif'>Where every day is an adventure in learning.</p>
+                  <p className='capitalize text-2xl font-semibold text-[#12265a] font_fredoka'>Tagore kindergarten <br />and daycare </p>
+                  <p className='text-justify mt-2 text-base font-medium text-[#12265a] font_fredoka'>Where every day is an adventure in learning.</p>
                 </div>
                 </div>
                 
               
 
               <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
-                <ul className='lg:ps-9 text-[#444547]'>
-                  <li className='text-[#12265a] font-serif '><b>All Programs</b></li>
+                <ul className='lg:ps-9 text-[#444547] font_fredoka'>
+                  <li className='text-[#12265a] '><b>All Programs</b></li>
                   <li>Kindergarten</li>
                   <li>Preschool</li>
                   <li>Kids Activity Club</li>
                   <li>Summer Camp</li>
                 </ul>
               </div>
-              <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
+              <div className=' w-full sm:w-1/2 lg:w-1/4 mb-4 p-3 mx-auto font_fredoka' style={{lineHeight:"2rem"}}>
                 <ul className='text-[#444547]'>
-                  <li className='text-[#12265a] font-serif '><b>Why Choose Tagore KG?</b></li>
+                  <li className='text-[#12265a]  '><b>Why Choose Tagore KG?</b></li>
                   <li>Innovative Learning</li>
                   <li>Safe & Nurturing Environment</li>
                   <li>Experienced Educators</li>
@@ -52,9 +50,9 @@ function Footer() {
                   <li>Cultural Diversity</li>
                 </ul>
               </div>
-              <div className='w-full sm:w-1/2 lg:w-1/4 p-3 mx-auto' style={{lineHeight:"2rem"}}>
+              <div className='w-full sm:w-1/2 lg:w-1/4 p-3 mx-auto font_fredoka' style={{lineHeight:"2rem"}}>
                 <ul className='text-[#444547]'>
-                  <li className='text-[#12265a]  font-serif'><b>Contact Info</b></li>
+                  <li className='text-[#12265a] '><b>Contact Info</b></li>
                   <li>8086029291</li>
                   <li>7736965145</li> 
                   <li>Kumarapuram, Medical College P.O., Thiruvananthapuram-695011</li>
@@ -65,10 +63,10 @@ function Footer() {
           <img src={footer1} alt="" srcset="" />
         </div>
         
-      <div className='w-full bg-sky-800 h-24 flex flex-wrap items-center justify-around text-white font-semibold relative'>
+      <div className='w-full bg-sky-600 h-24 flex flex-wrap items-center justify-around text-white font-semibold relative'>
 
           <div>
-            <p className='text-'> © 2024 A2Zalphabetsolutionz - All Rights Reserved.</p>
+            <p className='font_fredoka text-center font-light'> © 2024 A2Zalphabetsolutionz - All Rights Reserved.</p>
           </div>
 
           <div className='w-full sm:w-[150px] text-center text-white'>
@@ -82,10 +80,10 @@ function Footer() {
       
           <div className='flex gap-6 items-center'>
             <div>
-              <p>Terms & Conditions Privacy Policy</p>
+              <p className='font_fredoka font-light'>Terms & Conditions Privacy Policy</p>
             </div>
             <div>
-              <button className='w-12 h-10 rounded-lg bg-blue-500 absolute right-4 bottom-7' onClick={scrollToTop}>
+              <button className='w-12 h-10 rounded-lg bg-blue-500 absolute right-4 bottom-7 font_fredoka' onClick={scrollToTop}>
               <NavigationOutlinedIcon/>
               </button>
             </div>
